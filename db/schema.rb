@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20151016015739) do
   create_table "images", force: :cascade do |t|
     t.integer  "project_id"
     t.string   "url"
+    t.boolean  "is_default"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,7 +27,6 @@ ActiveRecord::Schema.define(version: 20151016015739) do
     t.date     "end_date"
     t.string   "short_description"
     t.text     "long_description"
-    t.integer  "image_id"
     t.string   "image_matching_color"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
