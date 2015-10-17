@@ -1,7 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  project_id: 1
+  project: led_project
+  url: http://img.archiexpo.com/images_ae/photo-g/flexible-led-light-strip-61242-4492019.jpg
+  is_default: true
 
 two:
-  project_id: 1
+  project: led_project
+  url: http://www.planetchristmas.com/siteimages/LEDsInARow.jpg
+  is_default: false

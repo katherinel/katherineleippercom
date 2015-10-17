@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  begin_date: 2015-10-07
-  end_date: 2015-10-07
-  short_description: MyString
-  long_description: MyText
+leds:
+  title: Project One
+  begin_date: 2012-10-07
+  end_date: 2014-10-07
+  short_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  long_description: >
+    Nullam congue consequat imperdiet. Etiam euismod elit vitae enim suscipit, 
+    ultrices rutrum quam hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+    Vivamus pharetra mi vitae est lacinia, non ullamcorper nibh cursus. Donec lacus metus, 
+    euismod ut rhoncus et, hendrerit et erat. 
+  image_matching_color: 993366
 
-two:
-  title: MyString
-  begin_date: 2015-10-07
-  end_date: 2015-10-07
-  short_description: MyString
-  long_description: MyText
+

@@ -6,7 +6,6 @@ class CreateProjects < ActiveRecord::Migration
       t.date :end_date
       t.string :short_description
       t.text :long_description
-      t.integer :image_id
       t.string :image_matching_color
 
       t.timestamps null: false

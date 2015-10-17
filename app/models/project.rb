@@ -1,3 +1,3 @@
 class Project < ActiveRecord::Base
-	has_one :image
+	has_many :images
 end
