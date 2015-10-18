@@ -1,5 +1,3 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 graphic_design:
   name: Graphic Design
   icon: nil
@@ -9,9 +7,9 @@ web_dev:
   icon: MyString
 
 creative_code:
-	name: Creative Code
-	icon: nil
+  name: Creative Code"
+  icon: nil
 
 art:
-	name: Art
-	icon: nil
+  name: Art
+  icon: nil
