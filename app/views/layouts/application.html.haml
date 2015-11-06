@@ -10,5 +10,10 @@
 		%header
 			%h1= "Katherine Leipper"
 			%h2= "Code, Design, Art - For the Web and Beyond"
-
-		=yield
+		%nav
+			%ul
+				%li= link_to "JOBS & PROJECTS", :controller => :projects, :action => :index
+				%li= link_to "EDUCATIONAL WORK"
+				%li= link_to "RÉSUMÉ & ABOUT"
+		.container
+			=yield
