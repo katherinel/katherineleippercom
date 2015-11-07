@@ -83,11 +83,11 @@ table {
 
 /* Webfont: ConduitITC-LightItalic */@font-face {
     font-family: 'ConduitITCLightItalic';
-    src: url('ConduitITC-LightItalic.eot'); /* IE9 Compat Modes */
-    src: url('ConduitITC-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('ConduitITC-LightItalic.woff') format('woff'), /* Modern Browsers */
-         url('ConduitITC-LightItalic.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('ConduitITC-LightItalic.svg#ConduitITC-LightItalic') format('svg'); /* Legacy iOS */
+    src: asset-url('ConduitITC-LightItalic.eot'); /* IE9 Compat Modes */
+    src: asset-url('ConduitITC-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         asset-url('ConduitITC-LightItalic.woff') format('woff'), /* Modern Browsers */
+         asset-url('ConduitITC-LightItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         asset-url('ConduitITC-LightItalic.svg#ConduitITC-LightItalic') format('svg'); /* Legacy iOS */
     font-style: italic;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -95,11 +95,11 @@ table {
 
 /* Webfont: ConduitITC-Medium */@font-face {
     font-family: 'ConduitITCMedium';
-    src: url('ConduitITC-Medium.eot'); /* IE9 Compat Modes */
-    src: url('ConduitITC-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('ConduitITC-Medium.woff') format('woff'), /* Modern Browsers */
-         url('ConduitITC-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('ConduitITC-Medium.svg#ConduitITC-Medium') format('svg'); /* Legacy iOS */
+    src: asset-url('ConduitITC-Medium.eot'); /* IE9 Compat Modes */
+    src: asset-url('ConduitITC-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         asset-url('ConduitITC-Medium.woff') format('woff'), /* Modern Browsers */
+         asset-url('ConduitITC-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+         asset-url('ConduitITC-Medium.svg#ConduitITC-Medium') format('svg'); /* Legacy iOS */
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -107,11 +107,11 @@ table {
 
 /* Webfont: ConduitITC-MediumItalic */@font-face {
     font-family: 'ConduitITCMediumItalic';
-    src: url('ConduitITC-MediumItalic.eot'); /* IE9 Compat Modes */
-    src: url('ConduitITC-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('ConduitITC-MediumItalic.woff') format('woff'), /* Modern Browsers */
-         url('ConduitITC-MediumItalic.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('ConduitITC-MediumItalic.svg#ConduitITC-MediumItalic') format('svg'); /* Legacy iOS */
+    src: asset-url('ConduitITC-MediumItalic.eot'); /* IE9 Compat Modes */
+    src: asset-url('ConduitITC-MediumItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         asset-url('ConduitITC-MediumItalic.woff') format('woff'), /* Modern Browsers */
+         asset-url('ConduitITC-MediumItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         asset-url('ConduitITC-MediumItalic.svg#ConduitITC-MediumItalic') format('svg'); /* Legacy iOS */
     font-style: italic;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -119,11 +119,11 @@ table {
 
 /* Webfont: ConduitITC-Bold */@font-face {
     font-family: 'ConduitITCBold';
-    src: url('ConduitITC-Bold.eot'); /* IE9 Compat Modes */
-    src: url('ConduitITC-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('ConduitITC-Bold.woff') format('woff'), /* Modern Browsers */
-         url('ConduitITC-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('ConduitITC-Bold.svg#ConduitITC-Bold') format('svg'); /* Legacy iOS */
+    src: asset-url('ConduitITC-Bold.eot'); /* IE9 Compat Modes */
+    src: asset-url('ConduitITC-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         asset-url('ConduitITC-Bold.woff') format('woff'), /* Modern Browsers */
+         asset-url('ConduitITC-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         asset-url('ConduitITC-Bold.svg#ConduitITC-Bold') format('svg'); /* Legacy iOS */
     font-style: normal;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -131,11 +131,11 @@ table {
 
 /* Webfont: ConduitITC-BoldItalic */@font-face {
     font-family: 'ConduitITCBoldItalic';
-    src: url('ConduitITC-BoldItalic.eot'); /* IE9 Compat Modes */
-    src: url('ConduitITC-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('ConduitITC-BoldItalic.woff') format('woff'), /* Modern Browsers */
-         url('ConduitITC-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('ConduitITC-BoldItalic.svg#ConduitITC-BoldItalic') format('svg'); /* Legacy iOS */
+    src: asset-url('ConduitITC-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: asset-url('ConduitITC-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         asset-url('ConduitITC-BoldItalic.woff') format('woff'), /* Modern Browsers */
+         asset-url('ConduitITC-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         asset-url('ConduitITC-BoldItalic.svg#ConduitITC-BoldItalic') format('svg'); /* Legacy iOS */
     font-style: italic;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -176,7 +176,7 @@ header {
 	margin: auto;
 	width: 492px;
 	height: 92px;
-	background: url("header_main_logo-07.png") no-repeat;
+	background: image-url("header_main_logo-07.png") no-repeat;
 	text-indent: -100000px;
 }
 
