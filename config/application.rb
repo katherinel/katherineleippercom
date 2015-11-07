@@ -25,6 +25,5 @@ module Katherineleippercom
 
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.assets.precompile += %w( .svg .eot .woff .ttf )
-    config.serve_static_assets = true
   end
 end
