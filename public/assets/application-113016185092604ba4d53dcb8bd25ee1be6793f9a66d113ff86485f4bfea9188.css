@@ -1,0 +1,301 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*********** BEGIN CSS RESET ***********/
+/* line 25, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 46, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 50, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+body {
+  line-height: 1;
+}
+
+/* line 53, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 56, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 59, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 64, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/********* END CSS RESET *********/
+/********* FONTS *****************/
+/* Webfont: ConduitITC-Light */
+@font-face {
+  font-family: 'ConduitITCLight';
+  src: url(/assets/ConduitITC-Light1-404bb5675d7661fd8231d729191968e1fb0677e4f1e021f11d56fe555b10fa63.eot);
+  /* IE9 Compat Modes */
+  src: url(/assets/ConduitITC-Light1-404bb5675d7661fd8231d729191968e1fb0677e4f1e021f11d56fe555b10fa63.eot?#iefix) format("embedded-opentype"), url(/assets/ConduitITC-Light1-658cc1556322745deb292c65c58b517c38e6898d501343b76751d68a5d6777ae.woff) format("woff"), url(/assets/ConduitITC-Light1-b503dab641a0c7091da1a70511dccc2c762ff5a4fef9bd8bf20d1f1afdcbbcdf.ttf) format("truetype"), url(/assets/ConduitITC-Light1-067e55038ee683e22b86b062a3c16bfb40e6d46535fdd99952c48d1b4a647014.svg#ConduitITC-Light) format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ConduitITC-LightItalic */
+@font-face {
+  font-family: 'ConduitITCLightItalic';
+  src: url("ConduitITC-LightItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("ConduitITC-LightItalic.eot?#iefix") format("embedded-opentype"), url("ConduitITC-LightItalic.woff") format("woff"), url("ConduitITC-LightItalic.ttf") format("truetype"), url("ConduitITC-LightItalic.svg#ConduitITC-LightItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ConduitITC-Medium */
+@font-face {
+  font-family: 'ConduitITCMedium';
+  src: url("ConduitITC-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("ConduitITC-Medium.eot?#iefix") format("embedded-opentype"), url("ConduitITC-Medium.woff") format("woff"), url("ConduitITC-Medium.ttf") format("truetype"), url("ConduitITC-Medium.svg#ConduitITC-Medium") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ConduitITC-MediumItalic */
+@font-face {
+  font-family: 'ConduitITCMediumItalic';
+  src: url("ConduitITC-MediumItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("ConduitITC-MediumItalic.eot?#iefix") format("embedded-opentype"), url("ConduitITC-MediumItalic.woff") format("woff"), url("ConduitITC-MediumItalic.ttf") format("truetype"), url("ConduitITC-MediumItalic.svg#ConduitITC-MediumItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ConduitITC-Bold */
+@font-face {
+  font-family: 'ConduitITCBold';
+  src: url("ConduitITC-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("ConduitITC-Bold.eot?#iefix") format("embedded-opentype"), url("ConduitITC-Bold.woff") format("woff"), url("ConduitITC-Bold.ttf") format("truetype"), url("ConduitITC-Bold.svg#ConduitITC-Bold") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+/* Webfont: ConduitITC-BoldItalic */
+@font-face {
+  font-family: 'ConduitITCBoldItalic';
+  src: url("ConduitITC-BoldItalic.eot");
+  /* IE9 Compat Modes */
+  src: url("ConduitITC-BoldItalic.eot?#iefix") format("embedded-opentype"), url("ConduitITC-BoldItalic.woff") format("woff"), url("ConduitITC-BoldItalic.ttf") format("truetype"), url("ConduitITC-BoldItalic.svg#ConduitITC-BoldItalic") format("svg");
+  /* Legacy iOS */
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+/********* END FONTS *************/
+/********* COLORS ****************/
+/********* END COLORS ************/
+/* line 156, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+body {
+  margin: 15px 0 0 0;
+  font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
+}
+
+/* line 161, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+h1, h2, h3, h4, h5, h6, nav {
+  font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
+  color: #404040;
+}
+
+/* line 166, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+a {
+  text-decoration: none;
+}
+/* line 168, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+a:link, a:visited {
+  color: #404040;
+}
+/* line 171, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+a:hover {
+  border-bottom: 2px solid #404040;
+}
+
+/* line 176, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+header {
+  margin: auto;
+  width: 492px;
+  height: 92px;
+  background: url("header_main_logo-07.png") no-repeat;
+  text-indent: -100000px;
+}
+
+/* line 184, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+#menu_btn {
+  display: none;
+}
+
+/* line 189, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul {
+  margin-top: 42px;
+  text-align: center;
+  width: 100%;
+  min-width: 610px;
+}
+/* line 194, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li {
+  display: inline-block;
+  margin: 0 24px;
+  padding: 14px;
+  position: relative;
+  height: 16px;
+}
+/* line 200, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:before, nav ul li:after {
+  content: " ";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 0px;
+}
+/* line 207, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:before {
+  left: -44px;
+  border-left: 44px solid transparent;
+  border-bottom: 44px solid;
+}
+/* line 212, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:after {
+  right: -44px;
+  border-right: 44px solid transparent;
+  border-top: 44px solid;
+}
+/* line 217, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(1) {
+  background-color: #FCCA6B;
+}
+/* line 219, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(1):before {
+  border-bottom-color: #FCCA6B;
+}
+/* line 222, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(1):after {
+  border-top-color: #FCCA6B;
+}
+/* line 226, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(2) {
+  background-color: #50C6E3;
+}
+/* line 228, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(2):before {
+  border-bottom-color: #50C6E3;
+}
+/* line 231, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(2):after {
+  border-top-color: #50C6E3;
+}
+/* line 235, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(3) {
+  background-color: #9F8BD8;
+}
+/* line 237, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(3):before {
+  border-bottom-color: #9F8BD8;
+}
+/* line 240, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+nav ul li:nth-child(3):after {
+  border-top-color: #9F8BD8;
+}
+
+@media screen and (max-width: 750px) {
+  /* line 249, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+  header {
+    margin-left: 10px;
+  }
+
+  /* line 252, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+  #menu_btn {
+    display: block;
+    width: 40px;
+    height: 12px;
+    text-align: center;
+    padding: 20px 10px;
+    float: right;
+    margin: 24px 24px 0 0;
+    /*position: absolute;
+    right: 20px;
+    top: 44px;*/
+    background-color: #404040;
+  }
+  /* line 264, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+  #menu_btn a {
+    position: relative;
+    color: #FFF;
+  }
+
+  /* line 269, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+  nav {
+    display: none;
+  }
+  /* line 271, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+  nav ul li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 14px 0;
+  }
+  /* line 276, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/application.scss */
+  nav ul li:before, nav ul li:after {
+    content: none;
+  }
+}
