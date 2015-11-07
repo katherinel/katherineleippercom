@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+	$("#menu_btn").click( function() {
+		$("nav").slideToggle(200);
+	});
+
+	$(window).on("resize", function () {
+		if ($(window).width() > 750) {
+			$("nav").show();
+		}
+	});
+});
