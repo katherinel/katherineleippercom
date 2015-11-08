@@ -277,3 +277,27 @@ nav {
 		}
 	}
 }
+
+footer {
+	text-align: center;
+	background-color: $dark-gray;
+	padding: 32px 0;
+	&:before {
+		content: ' ';
+	  display: block;
+	  clear: both;
+	}
+	.ex_link {
+		margin: 20px 3px;
+		li {
+			display: inline-block;
+		}
+		a {
+			padding-top: 44px;
+			color: $white;
+			&:hover {
+				border-bottom: 1px solid $white;
+			}
+		}
+	}
+}
