@@ -1,3 +1,63 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+$splash_size: 3em;
+
+#dev_design {
+	.left_side, .right_side {
+		float: left;
+		width: 50%;
+		height: 580px;
+		position: relative;
+	}
+	.left_side .splash_section_header {
+		h2 {
+			padding-top: $splash_size/20;
+			padding-left: $splash_size/6;
+		}
+	}
+	.right_side {
+		.splash_section_header {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			h2 {
+				padding-bottom: $splash_size/20;
+				padding-right: $splash_size/6;
+			}
+		}
+	}
+	.splash_section_header {
+		background-color: $dark-gray;
+		height: $splash_size;
+		width: 50%;
+		margin-left: $splash_size/2;
+		transform: skew(-45deg);
+		-webkit-transform: skew(-45deg);
+		-moz-transform: skew(-45deg);
+		-o-transform: skew(-45deg);
+		h2 {
+			transform: skew(45deg);
+			-webkit-transform: skew(45deg);
+	   	-moz-transform: skew(45deg);
+	    -o-transform: skew(45deg);
+			font-size: 114px;
+			color: $white;
+			opacity: 0.7;
+		}
+	}
+	.blurb {
+		width: 70%;
+    min-width: 150px;
+    position: absolute;
+    padding: 10px;
+    background: rgba(255, 255, 255, .7);
+	}
+	.left_side .blurb {
+		right: 0;
+    bottom: 50%;
+	}
+	.right_side .blurb {
+		left: 0;
+		top: 50%;
+	}
+}

@@ -3,6 +3,7 @@
 	%head
 		%title= "Katherine Leipper: Code, Design, Art - For the Web and Beyond"
 		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+		= stylesheet_link_tag params[:controller]
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 
@@ -18,5 +19,5 @@
 				%li= link_to "JOBS & PROJECTS", :controller => :projects, :action => :index
 				%li= link_to "EDUCATIONAL WORK"
 				%li= link_to "RÉSUMÉ & ABOUT"
-		.container
+		#container
 			=yield
