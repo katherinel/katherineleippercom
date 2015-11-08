@@ -10,6 +10,16 @@ $splash_size: 3em;
 		position: relative;
 	}
 	.left_side {
+		&:before {
+			content: " ";
+				width: 0px;
+		    height: 0px;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+				border-right: 580px solid transparent;
+				border-top: 580px solid $creamsicle;
+		}
 		.splash_section_header {
 			&:before {
 				content: " ";
@@ -28,6 +38,16 @@ $splash_size: 3em;
 		}
 	}
 	.right_side {
+		&:before {
+			content: " ";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-left: 580px solid transparent;
+			border-bottom: 580px solid $teal;
+		}
 		.splash_section_header {
 			position: absolute;
 			right: $splash_size/2;
@@ -43,15 +63,16 @@ $splash_size: 3em;
 				border-bottom: $splash_size solid $white;
 			}
 			h2 {
-				margin-top: -$splash_size/6;
-				margin-left: -$splash_size/6;
+				position: absolute;
+				top: -$splash_size/6;
+				right: $splash_size/6;
 			}
 		}
 	}
 	.splash_section_header {
 		background-color: $dark-gray;
 		height: $splash_size;
-		width: 50%;
+		width: 532px;
 		margin-left: $splash_size/2;
 		transform: skew(-45deg);
 		-webkit-transform: skew(-45deg);
@@ -63,8 +84,9 @@ $splash_size: 3em;
 	   	-moz-transform: skew(45deg);
 	    -o-transform: skew(45deg);
 			font-size: 114px;
+			font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
 			color: $white;
-			opacity: 0.7;
+			opacity: 0.5;
 		}
 	}
 	.blurb {
@@ -75,7 +97,7 @@ $splash_size: 3em;
     background: rgba(255, 255, 255, .7);
     p {
     	font-size: 24px;
-    	font-family: "ConduitITCLightItalic";
+    	font-family: "ConduitITCLightItalic", Arial, Helvetica, sans-serif;
     	line-height: 1.4em;
     	margin-bottom: 0.5em;
     }
