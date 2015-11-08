@@ -71,8 +71,19 @@ $splash_size: 3em;
 		width: 70%;
     min-width: 150px;
     position: absolute;
-    padding: 10px;
+    padding: 20px;
     background: rgba(255, 255, 255, .7);
+    p {
+    	font-size: 24px;
+    	font-family: "ConduitITCLightItalic";
+    	line-height: 1.4em;
+    	margin-bottom: 0.5em;
+    }
+    .continue {
+    	font-size: 20px;
+    	font-family: "ConduitITCBold";
+    	float: right;
+    }
 	}
 	.left_side .blurb {
 		right: 0;
