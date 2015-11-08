@@ -9,20 +9,32 @@ $splash_size: 3em;
 		height: 580px;
 		position: relative;
 	}
-	.left_side .splash_section_header {
-		h2 {
-			padding-top: $splash_size/20;
-			padding-left: $splash_size/6;
+	.left_side {
+		.splash_section_header {
+			&:before {
+				content: " ";
+				width: 0px;
+		    height: 0px;
+		    position: absolute;
+		    top: 0;
+		    left: -$splash_size;
+				border-left: $splash_size solid transparent;
+				border-top: $splash_size solid $white;
+			}
+			h2 {
+				padding-top: $splash_size/20;
+				padding-left: $splash_size/6;
+			}
 		}
 	}
 	.right_side {
 		.splash_section_header {
 			position: absolute;
-			right: 0;
+			right: $splash_size/2;
 			bottom: 0;
 			h2 {
-				padding-bottom: $splash_size/20;
-				padding-right: $splash_size/6;
+				margin-top: -$splash_size/6;
+				margin-left: -$splash_size/6;
 			}
 		}
 	}
