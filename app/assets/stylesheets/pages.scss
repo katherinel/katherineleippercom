@@ -32,6 +32,16 @@ $splash_size: 3em;
 			position: absolute;
 			right: $splash_size/2;
 			bottom: 0;
+			&:after {
+				content: " ";
+				width: 0px;
+		    height: 0px;
+		    position: absolute;
+		    bottom: 0;
+		    right: -$splash_size;
+				border-right: $splash_size solid transparent;
+				border-bottom: $splash_size solid $white;
+			}
 			h2 {
 				margin-top: -$splash_size/6;
 				margin-left: -$splash_size/6;
