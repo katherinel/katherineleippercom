@@ -83,7 +83,7 @@ $splash_size: 3em;
 			-webkit-transform: skew(45deg);
 	   	-moz-transform: skew(45deg);
 	    -o-transform: skew(45deg);
-			font-size: 114px;
+			font-size: 5.7em;
 			font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
 			color: $white;
 			opacity: 0.5;
@@ -96,13 +96,13 @@ $splash_size: 3em;
     padding: 20px;
     background: rgba(255, 255, 255, .7);
     p {
-    	font-size: 24px;
+    	font-size: 1.5em;
     	font-family: "ConduitITCLightItalic", Arial, Helvetica, sans-serif;
     	line-height: 1.4em;
     	margin-bottom: 0.5em;
     }
     .continue {
-    	font-size: 20px;
+    	font-size: 1.25em;
     	font-family: "ConduitITCBold";
     	float: right;
     }
