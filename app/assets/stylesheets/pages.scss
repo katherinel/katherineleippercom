@@ -1,6 +1,7 @@
 @import 'colors';
 
 $splash_size: 3em;
+$blurb_size: 2em;
 
 #dev_design {
 	.left_side, .right_side {
@@ -85,6 +86,7 @@ $splash_size: 3em;
 	    -o-transform: skew(45deg);
 			font-size: 5.7em;
 			font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
+			letter-spacing: 0.05em;
 			color: $white;
 			opacity: 0.5;
 		}
@@ -93,7 +95,7 @@ $splash_size: 3em;
 		width: 70%;
     min-width: 150px;
     position: absolute;
-    padding: 20px;
+    padding: 0 $blurb_size;
     background: rgba(255, 255, 255, .7);
     p {
     	font-size: 1.5em;
@@ -106,10 +108,46 @@ $splash_size: 3em;
     	font-family: "ConduitITCBold";
     	float: right;
     }
+    .edge {
+    	position: absolute;
+    	background: rgba(255, 255, 255, .7);
+    	height: $blurb_size;
+    	width: -moz-calc(100% - #{$blurb_size});
+    	width: -webkit-calc(100% - #{$blurb_size});
+    	width: calc(100% - #{$blurb_size});
+    	&.top {
+    		right: 0;
+    		top: -$blurb_size;
+    		&:before {
+    			content: " ";
+					width: 0px;
+			    height: 0px;
+			    position: absolute;
+			    top: 0;
+			    left: -$blurb_size;
+					border-left: $blurb_size solid transparent;
+					border-bottom: $blurb_size solid rgba(255, 255, 255, .7);
+    		}
+    	}
+    	&.bottom {
+	    	left: 0;
+	    	bottom: -$blurb_size;
+	    	&:after {
+	    		content: " ";
+					width: 0px;
+			    height: 0px;
+			    position: absolute;
+			    top: 0;
+			    right: -$blurb_size;
+					border-right: $blurb_size solid transparent;
+					border-top: $blurb_size solid rgba(255, 255, 255, .7);
+	    	}
+	    }
+	  }
 	}
 	.left_side .blurb {
-		right: 0;
-    bottom: 50%;
+		right: 20px;
+    bottom: calc(50% - 20px);
 	}
 	.right_side .blurb {
 		left: 0;
