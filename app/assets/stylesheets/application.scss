@@ -282,22 +282,40 @@ footer {
 	text-align: center;
 	background-color: $dark-gray;
 	padding: 32px 0;
+	color: $white;
 	&:before {
 		content: ' ';
 	  display: block;
 	  clear: both;
 	}
-	.ex_link {
-		margin: 20px 3px;
-		li {
-			display: inline-block;
-		}
+	li.ex_link {
+		margin: 20px 3px 40px 3px;
+		width: 120px;
+		display: inline-block;
 		a {
-			padding-top: 44px;
 			color: $white;
 			&:hover {
 				border-bottom: 1px solid $white;
 			}
+			span.icon {
+				display: block;
+				background: image_url("icon_sprite.png") no-repeat;
+				width: 45px;
+				height: 39px;
+				margin: 0 auto 10px auto;
+				&.github {
+					background-position: -68px 0px;
+				}
+				&.linkedin {
+					background-position: -114px 0px;
+				}
+				&.instructables {
+					background-position: -160px 0px;
+				}
+			}
 		}
+	}
+	p {
+		font-size: 14px;
 	}
 }
