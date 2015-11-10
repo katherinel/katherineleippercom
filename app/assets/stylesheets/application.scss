@@ -255,8 +255,11 @@ nav {
 
 #container {
 	margin: 30px 0 90px 0;
-	background: image_url("dev_design_splash_bkgd.png") no-repeat center;
 	overflow: hidden;
+}
+
+.padded_container {
+	padding: 0 120px;
 }
 
 footer {

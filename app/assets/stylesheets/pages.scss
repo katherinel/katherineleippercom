@@ -3,7 +3,37 @@
 $splash_size: 3em;
 $blurb_size: 2em;
 
-#dev_design {
+.splash {
+	overflow: hidden;
+	&#dev_design {
+		background: image_url("dev_design_splash_bkgd.png") no-repeat center;
+	}
+	&#edu {
+		background: image_url("edu_splash_bkgd.png") no-repeat left;
+		.left_side {
+			width: 100%;
+			&:before {
+				border-top: 580px solid $purple;
+			}
+			&:after {
+				content: " ";
+				width: 0px;
+		    height: 0px;
+		    position: absolute;
+		    bottom: 0;
+		    right: 0;
+				border-left: $splash_size solid transparent;
+				border-bottom: $splash_size solid $white;
+			}
+		}
+		.blurb {
+			width: 30%;
+			left: 60%;
+			top: 50%;
+			bottom: inherit;
+			right: inherit;
+		}
+	}
 	.left_side, .right_side {
 		float: left;
 		width: 50%;
@@ -13,13 +43,13 @@ $blurb_size: 2em;
 	.left_side {
 		&:before {
 			content: " ";
-				width: 0px;
-		    height: 0px;
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-				border-right: 580px solid transparent;
-				border-top: 580px solid $burnt-orange;
+			width: 0px;
+	    height: 0px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+			border-right: 580px solid transparent;
+			border-top: 580px solid $burnt-orange;
 		}
 		.splash_section_header {
 			&:before {
@@ -33,7 +63,7 @@ $blurb_size: 2em;
 				border-top: $splash_size solid $white;
 			}
 			h2 {
-				padding-top: $splash_size/20;
+				padding-top: $splash_size/8;
 				padding-left: $splash_size/6;
 			}
 		}
@@ -64,8 +94,9 @@ $blurb_size: 2em;
 				border-bottom: $splash_size solid $white;
 			}
 			h2 {
+				text-align: right;
 				position: absolute;
-				top: -$splash_size/6;
+				top: -$splash_size/8;
 				right: $splash_size/6;
 			}
 		}
@@ -89,6 +120,8 @@ $blurb_size: 2em;
 			letter-spacing: 0.05em;
 			color: $white;
 			opacity: 0.5;
+			line-height: 0.8em;
+			width: $splash_size * 3;
 		}
 	}
 	.blurb {
@@ -152,5 +185,12 @@ $blurb_size: 2em;
 	.right_side .blurb {
 		left: 0;
 		top: 50%;
+	}
+}
+
+#featured_projects {
+	h3 {
+		font-size: 1.125em;
+		margin: 55px 0 18px 0;
 	}
 }
