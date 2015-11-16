@@ -249,6 +249,9 @@ nav {
 					border-top-color: $purple;
 				}
 			}
+			&.current {
+				font-size: 1.5em;
+			}
 		}
 	}
 }

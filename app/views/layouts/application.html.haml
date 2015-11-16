@@ -18,9 +18,9 @@
 		%span
 		%nav
 			%ul
-				%li= link_to "JOBS & PROJECTS", :controller => :projects, :action => :index
-				%li= link_to "EDUCATIONAL WORK"
-				%li= link_to "RÉSUMÉ & ABOUT"
+				%li.jobs= link_to "JOBS & PROJECTS", :controller => :projects, :action => :index
+				%li.edu= link_to "EDUCATIONAL WORK"
+				%li.about= link_to "RÉSUMÉ & ABOUT"
 		#container
 			=yield
 		%footer

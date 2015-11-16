@@ -1,3 +1,20 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+ul#cat_filters {
+	overflow: hidden;
+	li {
+		float: left;
+		margin-right: 1em;
+		font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
+		font-size: 1.75em;
+		color: $med-gray;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		.checkbox {
+			width: 0.5em;
+			height: 0.5em;
+			border: 3px solid $med-gray;
+			display: inline-block;
+		}
+	}
+}

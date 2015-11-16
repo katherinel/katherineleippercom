@@ -1,0 +1,12 @@
+.padded_container
+	%ul#cat_filters
+		- @categories.each do |c|
+			%li
+				%span.checkbox
+				= "#{c.name}"
+.padded_container
+	- @projects.each do |p|
+		.proj_box
+			%p= "#{ p.begin_year }"
+			%p= "#{ p.end_year }"
+			%h3= "#{p.title}"

@@ -1,13 +1,13 @@
-graphic_design:
-  name: Graphic Design
-  icon: nil
-
 web_dev:
   name: Web Dev
   icon: MyString
 
+graphic_design:
+  name: Graphic Design
+  icon: nil
+
 creative_code:
-  name: Creative Code"
+  name: Creative Code
   icon: nil
 
 art:

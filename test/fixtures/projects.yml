@@ -1,15 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 leds:
-  title: Project One
+  title: LED Flower Lights
   begin_date: 2012-10-07
   end_date: 2014-10-07
-  short_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  short_description: "A pixel thing I made for a place I worked at."
   long_description: >
     Nullam congue consequat imperdiet. Etiam euismod elit vitae enim suscipit, 
     ultrices rutrum quam hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
     Vivamus pharetra mi vitae est lacinia, non ullamcorper nibh cursus. Donec lacus metus, 
     euismod ut rhoncus et, hendrerit et erat. 
-  image_matching_color: 993366
+  image_matching_color: 3F67AA
 
-
+pyramids:
+  title: Generative pyramids
+  begin_date: 2013-10-07
+  end_date:
+  short_description: "I wrote some code to make some 3d pyramids."
+  long_description: >
+    Nullam congue consequat imperdiet. Etiam euismod elit vitae enim suscipit, 
+    ultrices rutrum quam hendrerit. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+    Vivamus pharetra mi vitae est lacinia, non ullamcorper nibh cursus. Donec lacus metus, 
+    euismod ut rhoncus et, hendrerit et erat. 
+  image_matching_color: 90817A
