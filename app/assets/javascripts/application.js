@@ -16,10 +16,6 @@
 //= require_tree .
 
 $(function() {
-	$("header h1").text( $("header h1").text().toUpperCase() );
-	$("header h2").text( $("header h2").text().toUpperCase() );
-	$("header h1").html( $("header h1").text().replace(" ", " <span class=\"logo\"></span> ") );
-
 	$("#menu_btn").click( function() {
 		$("nav").slideToggle(200);
 	});

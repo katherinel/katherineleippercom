@@ -13,14 +13,17 @@
 		#menu_btn
 			%a{:href => "javascript:void(0)"}= "MENU"
 		%header
-			%h1= "Katherine Leipper"
+			%h1
+				Katherine
+				%span.logo
+				Leipper
 			%h2= "Code, Design, Art /// For the Web and Beyond"
 		%span
 		%nav
 			%ul
-				%li.jobs= link_to "JOBS & PROJECTS", :controller => :projects, :action => :index
-				%li.edu= link_to "EDUCATIONAL WORK"
-				%li.about= link_to "RÉSUMÉ & ABOUT"
+				%li.jobs= link_to "Jobs & Projects", :controller => :projects, :action => :index
+				%li.edu= link_to "Educational Work"
+				%li.about= link_to "Résumé & About"
 		#container
 			=yield
 		%footer
@@ -28,13 +31,13 @@
 				%li.ex_link
 					= link_to "https://github.com/katherinel" do
 						%span.icon.github
-						GITHUB
+						Github
 				%li.ex_link
 					= link_to "https://www.linkedin.com/pub/katherine-leipper/8/97b/618" do
 						%span.icon.linkedin
-						LINKEDIN
+						LinkedIn
 				%li.ex_link
 					= link_to "http://www.instructables.com/member/katherinel/" do
 						%span.icon.instructables
-						INSTRUCTABLES
+						Instructables
 			%p= "Contact /// Copyright #{Time.now.year}"

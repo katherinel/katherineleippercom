@@ -171,6 +171,7 @@ header {
 	h1, h2 {
 		font-family: "ConduitITCBoldItalic", Arial, Helvetica, sans-serif;
 		letter-spacing: 0.075em;
+		text-transform: uppercase;
 	}
 	h1 {
 		font-size: 3.125em;
@@ -205,6 +206,7 @@ nav {
 			padding: 14px;
 			position: relative;
 			height:16px;
+			text-transform: uppercase;
 			&:before, &:after {
 				content: " ";
 				width: 0px;
@@ -279,6 +281,7 @@ footer {
 		margin: 20px 3px 40px 3px;
 		width: 120px;
 		display: inline-block;
+		text-transform: uppercase;
 		a {
 			color: $white;
 			&:hover {
