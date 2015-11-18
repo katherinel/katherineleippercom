@@ -10,6 +10,26 @@ class ProjectsController < ApplicationController
 		@project = Project.find(params[:id])
 	end
 
+	def new
+		@project = Project.new
+	end
+
+	def create
+		@project = Project.new(project_params)
+		if @project.save
+			redirect_to :action => :index
+		else
+			flash[:error] = @project.errors
+		end
+	end
+
 	def edit
+		@project = Project.find(params[:id])
+	end
+
+	private
+
+	def project_params
+		params.require(:project).permit(:title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color)
 	end
 end
