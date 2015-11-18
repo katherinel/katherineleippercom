@@ -203,8 +203,16 @@ $blurb_size: 2em;
 		&#dev_design {
 			background: none;
 			.left_side, .right_side {
-				background: url(/assets/dev_design_splash_bkgd-9988bb67726a46baa5eeb69eea5c32f75a9f740a23797a70340382a0a0a52525.png) no-repeat;				
+				background-image: url(/assets/dev_design_splash_bkgd-9988bb67726a46baa5eeb69eea5c32f75a9f740a23797a70340382a0a0a52525.png);
+				background-repeat: no-repeat;				
 			}
+		}
+		&#edu .blurb {
+			top: 35%;
+			bottom: inherit;
+			left: 5%;
+			right: 5%;
+			width: 70%;
 		}
 		.splash_section_header {
 			width: 100vw;

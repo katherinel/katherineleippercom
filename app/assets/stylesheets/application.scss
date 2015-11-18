@@ -279,7 +279,7 @@ footer {
 	}
 	li.ex_link {
 		margin: 20px 3px 40px 3px;
-		width: 120px;
+		width: 110px;
 		display: inline-block;
 		text-transform: uppercase;
 		a {
@@ -366,9 +366,10 @@ footer {
 		display: none;
 		ul li {
 			display: block;
-			width: 100%;
+			width: 100vw;
+			font-size: 6vw;
 			margin: 0;
-			padding: 14px 0;
+			padding: 5vw 0;
 			&:before, &:after {
 				content: none;
 			}
