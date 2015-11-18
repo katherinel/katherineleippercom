@@ -364,14 +364,17 @@ footer {
 	}
 	nav {
 		display: none;
-		ul li {
-			display: block;
+		ul {
 			width: 100vw;
-			font-size: 6vw;
-			margin: 0;
-			padding: 5vw 0;
-			&:before, &:after {
-				content: none;
+			li {
+				display: block;
+				width: 100vw;
+				font-size: 6vw;
+				margin: 0;
+				padding: 5vw 0;
+				&:before, &:after {
+					content: none;
+				}
 			}
 		}
 	}
