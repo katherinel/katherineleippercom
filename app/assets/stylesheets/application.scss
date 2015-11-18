@@ -365,7 +365,7 @@ footer {
 	nav {
 		display: none;
 		ul {
-			width: 100vw;
+			min-width: inherit;
 			li {
 				display: block;
 				width: 100vw;
