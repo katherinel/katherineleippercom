@@ -39,6 +39,9 @@ $blurb_size: 2em;
 		width: 50%;
 		height: 580px;
 		position: relative;
+		h2 {
+			text-transform: uppercase;
+		}
 	}
 	.left_side {
 		&:before {
@@ -57,7 +60,7 @@ $blurb_size: 2em;
 				width: 0px;
 		    height: 0px;
 		    position: absolute;
-		    top: 0;
+		    top: -1px; /* because it leaves a line at the top otherwise */
 		    left: -$splash_size;
 				border-left: $splash_size solid transparent;
 				border-top: $splash_size solid $white;
@@ -192,5 +195,68 @@ $blurb_size: 2em;
 	h3 {
 		font-size: 1.125em;
 		margin: 55px 0 18px 0;
+	}
+}
+
+@media screen and (max-device-width: 750px) {
+	.splash {
+		&#dev_design {
+			background: none;
+			.left_side, .right_side {
+				background: url(/assets/dev_design_splash_bkgd-9988bb67726a46baa5eeb69eea5c32f75a9f740a23797a70340382a0a0a52525.png) no-repeat;				
+			}
+		}
+		.splash_section_header {
+			width: 100vw;
+			h2 {
+				max-width: 90vw;
+			}
+		}
+		.left_side, .right_side {
+			float: none;
+			width: 100vw;
+			height: calc(100vw + 3em);
+			.splash_section_header h2 {
+				padding-top: 0.75em;
+				font-size: 14vw;
+			}
+			.blurb {
+				left: 5%;
+				right: 5%;
+				p {
+					font-size: 6vw;
+				}
+				.continue {
+					font-size: 5vw;
+				}
+			}
+		}
+		.left_side {
+			background-position: left bottom;
+			&:before {
+				border-right-width: 100vw;
+				border-top-width: 100vw;
+				top: 3em;
+			}
+			.blurb {
+				top: 35%;
+				bottom: inherit;
+			} 
+		}
+		.right_side { 
+			background-position: right top;
+			&:before {
+				border-left-width: 100vw;
+				border-bottom-width: 100vw;
+				bottom: 3em;
+			}
+			.splash_section_header h2 {
+				padding-top: 0;
+			}
+			.blurb {
+				bottom: 35%;
+				top: inherit;
+			}
+		}
 	}
 }

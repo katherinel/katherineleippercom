@@ -312,20 +312,51 @@ footer {
 
 @media screen and (max-device-width: 750px) {
 	header {
-		margin-left: 10px;
+		margin-left: 3vw;
+		width: 75vw;
+		h1 {
+			font-size: 7.1vw;
+			.logo {
+				width: 10vw;
+				height: 8.5vw;
+				background-size: 30vw;
+			}
+		}
+		h2 {
+			font-size: 3.2vw;
+		}
 	}
 	#menu_btn {
 		display: block;
-		width: 40px;
-		height: 12px;
-		text-align: center;
-		padding: 20px 10px;
-		float: right;
-		margin: 24px 24px 0 0;
-		/*position: absolute;
-		right: 20px;
-		top: 44px;*/
-		background-color: $dark-gray;
+		width: 15vw;
+		height: 5px;
+		border: 10px solid $teal;
+		position: absolute;
+		right: 0;
+		top: 25px;
+		background-color: $white;
+		&:before {
+			content: " ";
+			display: block;
+			position: absolute;
+			top: -35px;
+			left: -10px;
+			border: 10px solid $creamsicle;
+			width: 15vw;
+			height: 5px;
+			background-color: $white;
+		}
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			bottom: -35px;
+			left: -10px;
+			border: 10px solid $purple;
+			width: 15vw;
+			height: 5px;
+			background-color: $white;
+		}
 		a {
 			position: relative;
 			color: $white;
