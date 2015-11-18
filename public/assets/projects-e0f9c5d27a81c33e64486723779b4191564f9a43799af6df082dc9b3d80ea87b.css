@@ -1,0 +1,21 @@
+/* line 3, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters {
+  overflow: hidden;
+}
+/* line 5, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li {
+  float: left;
+  margin-right: 1em;
+  font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
+  font-size: 1.75em;
+  color: #808080;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/* line 13, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li .checkbox {
+  width: 0.5em;
+  height: 0.5em;
+  border: 3px solid #808080;
+  display: inline-block;
+}
