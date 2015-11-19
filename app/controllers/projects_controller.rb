@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
 		if @project.save
 			redirect_to :action => :index
 		else
-			flash[:error] = @project.errors
+			redirect_to new_project_path
 		end
 	end
 
