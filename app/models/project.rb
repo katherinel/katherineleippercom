@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
-	has_many :images
-	accepts_nested_attributes_for :images
+	has_many :images, :dependent => :destroy
+	accepts_nested_attributes_for :images, allow_destroy: true
 	validates_presence_of :images
 	validates_associated :images
 	validates :title, :begin_date, :short_description, :long_description, :presence => true

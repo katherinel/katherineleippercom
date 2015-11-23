@@ -24,6 +24,9 @@
 				%li.jobs= link_to "Jobs & Projects", :controller => :projects, :action => :index
 				%li.edu= link_to "Educational Work"
 				%li.about= link_to "Résumé & About"
+		#flash_msgs.padded_container
+			- flash.each do |key, value|
+				%p{:class => "alert alert-#{key}"}= value
 		#container
 			=yield
 		%footer

@@ -12,14 +12,18 @@ class ProjectsController < ApplicationController
 
 	def new
 		@project = Project.new
+		@project.images.build
 	end
 
 	def create
 		@project = Project.new(project_params)
-		if @project.save
-			redirect_to :action => :index
-		else
-			redirect_to new_project_path
+		respond_to do |format|
+			if @project.save
+				format.html { redirect_to action: "index" }
+			else
+				flash[:notice] = "Unable to save project"
+				format.html { redirect_to action: "new" }
+			end
 		end
 	end
 
@@ -30,6 +34,6 @@ class ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color)
+		params.require(:project).permit(:title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:image])
 	end
 end

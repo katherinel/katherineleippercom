@@ -1,22 +1,2 @@
 .padded_container
-	= form_for @project do |f|
-		.form_line
-			= f.label :title
-			= f.text_field :title
-		.form_line
-			= f.label :begin_date
-			= f.date_select :begin_date, discard_day: true
-		.form_line
-			= f.label :end_date
-			= f.date_select :end_date, discard_day: true
-		.form_line
-			= f.label :short_description
-			= f.text_area :short_description
-		.form_line
-			= f.label :long_description
-			= f.text_area :long_description
-		.form_line
-			= f.label :image_matching_color
-			= f.text_field :image_matching_color
-
-		= f.submit
+	= render 'form'
