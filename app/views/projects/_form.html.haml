@@ -1,13 +1,14 @@
+%h2= "Add a Project"
 = form_for @project do |f|
 	.form_line
 		= f.label :title
 		= f.text_field :title
 	.form_line
 		= f.label :begin_date
-		= f.date_select :begin_date, discard_day: true
+		= f.date_select :begin_date, discard_day: true, start_year: 2008, end_year: Date.today.year
 	.form_line
 		= f.label :end_date
-		= f.date_select :end_date, discard_day: true
+		= f.date_select :end_date, discard_day: true, start_year: 2008, end_year: Date.today.year
 	.form_line
 		= f.label :short_description
 		= f.text_area :short_description
@@ -15,11 +16,15 @@
 		= f.label :long_description
 		= f.text_area :long_description
 	.form_line
-		= f.label :image_matching_color
-		= f.text_field :image_matching_color
-	.form_line
-		= f.fields_for :images, html: { multipart: true } do |fi|
+		= f.label :image_matching_color, 'Image color match: #'
+		= f.text_field :image_matching_color, :maxlength => 6
+
+	= f.fields_for :images, html: { multipart: true } do |fi|
+		.form_line
 			= fi.label :image
 			= fi.file_field :image
+		.form_line
+			= fi.label :is_default, 'This is the default image'
+			= fi.radio_button :is_default, 'Default Image'
 
 	= f.button :submit
