@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
 			if @project.save
 				format.html { redirect_to action: "index" }
 			else
-				flash[:notice] = "Unable to save project"
+				flash[:error] = @project.errors.full_messages.to_sentence
 				format.html { redirect_to action: "new" }
 			end
 		end
@@ -34,6 +34,6 @@ class ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:image])
+		params.require(:project).permit(:title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:id, :image, :_destroy])
 	end
 end

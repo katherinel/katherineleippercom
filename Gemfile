@@ -27,6 +27,8 @@ gem 'haml', '~>4.0.7'
 
 gem 'carrierwave', '~> 0.9'
 
+gem 'nested_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

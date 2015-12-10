@@ -1,0 +1,8 @@
+#image_form
+	= f.fields_for :images, html: { multipart: true } do |fi|
+		.form_line
+			= fi.label :image
+			= fi.file_field :image
+		.form_line
+			= fi.label :is_default, 'This is the default image'
+			= fi.radio_button :is_default, 'Default Image'

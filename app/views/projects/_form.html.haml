@@ -1,5 +1,5 @@
 %h2= "Add a Project"
-= form_for @project do |f|
+= nested_form_for @project do |f|
 	.form_line
 		= f.label :title
 		= f.text_field :title
@@ -19,12 +19,10 @@
 		= f.label :image_matching_color, 'Image color match: #'
 		= f.text_field :image_matching_color, :maxlength => 6
 
-	= f.fields_for :images, html: { multipart: true } do |fi|
-		.form_line
-			= fi.label :image
-			= fi.file_field :image
-		.form_line
-			= fi.label :is_default, 'This is the default image'
-			= fi.radio_button :is_default, 'Default Image'
+	= render partial: "add_image", :locals => { :f => f, :project => @project }
+
+	#add_image_link
+		= f.link_to_add 'Add another image', :images, :data => { :target => "#image_form" }
+		=# link_to 'Add another image', add_image_path(@project), remote: true
 
 	= f.button :submit
