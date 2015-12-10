@@ -309,6 +309,14 @@ footer {
 		font-size: 0.8em;
 	}
 }
+#flash_msgs .alert {
+	margin: 1em 0;
+	padding: 0.5em;
+	color: white;
+	&.alert-error {
+		background-color: #FF4747;
+	}
+}
 form .form_line {
 	margin: 1em 0;
 }
