@@ -3,4 +3,5 @@ class Image < ActiveRecord::Base
 	belongs_to :project
 	#validates_presence_of :project
 	validates :image, :presence => true
+	attr_accessor :is_default
 end
