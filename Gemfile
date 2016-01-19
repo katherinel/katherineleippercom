@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml', '~>4.0.7'
 
 gem 'carrierwave', '~> 0.9'
+gem 'mini_magick'
 
 gem 'nested_form'
 

@@ -1,0 +1,5 @@
+.proj_box
+	= image_tag(p.images.first.image.small.url, :class => 'proj_image') # fix this later to be default image
+	%p= "#{ p.begin_year }"
+	%p= "#{ p.end_year }"
+	%h3= "#{p.title}"

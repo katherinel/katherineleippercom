@@ -17,4 +17,8 @@ class Project < ActiveRecord::Base
 			self.end_date.strftime('%Y')
 		end
 	end
+
+	def self.featured
+		Project.order("end_date DESC").first(3) # fix this later
+	end
 end

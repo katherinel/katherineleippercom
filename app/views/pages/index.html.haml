@@ -17,10 +17,12 @@
 			%span.continue= "See for yourself"
 			.edge.bottom
 
-#featured_projects
+#featured_projects.clearfix
 	.padded_container
 		%h3
 			FEATURED PROJECTS See all
+		- Project.featured.each do |p|
+			= render partial: "shared/project_box", locals: { p: p }
 
 #edu.splash
 	.left_side
