@@ -196,6 +196,11 @@ $blurb_size: 2em;
 	margin: 55px 0 40px 0;
 	h3.featured {
 		font-size: 1.125em;
+		text-transform: uppercase;
+		.projects_link {
+			margin-left: 1em;
+			text-transform: none;
+		}
 	}
 }
 

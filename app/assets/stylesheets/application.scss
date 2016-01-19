@@ -165,6 +165,21 @@ a {
 	}
 }
 
+.arrow_link {
+	position: relative;
+	&:after {
+		content: " ";
+		width: 0; 
+		height: 0; 
+		right: 0;
+		margin-right: -0.6em;
+		position: absolute;
+		border-top: 0.35em solid transparent;
+		border-bottom: 0.35em solid transparent;		
+		border-left: 0.35em solid $dark-gray;
+	}
+}
+
 .clearfix {
 	overflow: hidden;
 }

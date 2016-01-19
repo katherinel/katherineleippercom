@@ -5,7 +5,7 @@
 		.blurb
 			.edge.top
 			%p= "Specializing in front-end dev, with professional experience in full stack Ruby on Rails."
-			%span.continue= "Don't take my word for it"
+			%span.continue.arrow_link= "Don't take my word for it"
 			.edge.bottom
 
 	.right_side
@@ -14,13 +14,14 @@
 		.blurb
 			.edge.top
 			%p= "Trained in traditional graphic design, with broad expertise in many areas: web, print, logos, branding, and more."
-			%span.continue= "See for yourself"
+			%span.continue.arrow_link= "See for yourself"
 			.edge.bottom
 
 #featured_projects.clearfix
 	.padded_container
 		%h3.featured
-			FEATURED PROJECTS See all
+			Featured Projects
+			%span.projects_link.arrow_link= link_to "See all", projects_path
 		- Project.featured.each do |p|
 			= render partial: "shared/project_box", locals: { p: p }
 
