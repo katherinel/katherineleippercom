@@ -193,20 +193,91 @@ $blurb_size: 2em;
 
 #featured_projects {
 	min-width: 750px;
-	h3 {
+	margin: 55px 0 40px 0;
+	h3.featured {
 		font-size: 1.125em;
-		margin: 55px 0 18px 0;
 	}
 }
 
 .proj_box {
 	width: 33%;
+	max-width: 300px;
+	margin: 1.5%;
 	float: left;
-	border: 1px solid black;
 	overflow: hidden;
 	height: 200px;
+	position: relative;
+	&:before {
+		content: " ";
+		width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+		border-right: 7em solid transparent;
+		border-top: 7em solid rgba(255, 255, 255, 0.6);
+	}
+	&:after {
+		content: " ";
+		width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: 0;
+    right: -1em;
+		border-left: $splash_size solid transparent;
+		border-bottom: $splash_size solid $white;
+	}
 	.proj_image {
-		width: 100%;
+		position: relative;
+		z-index: -2;
+	}
+	.proj_years {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		padding: 3em 1em;
+		&:before {
+			content: " ";
+			width: 0px;
+	    height: 0px;
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+			border-left: 10em solid transparent;
+			border-bottom: 10em solid $light-gray;
+			z-index: -1;
+		}
+		p.year {
+		}
+	}
+	.proj_title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: $dark-gray;
+		transform: skew(-45deg);
+		-webkit-transform: skew(-45deg);
+		-moz-transform: skew(-45deg);
+		-o-transform: skew(-45deg);
+		width: 85%;
+		h3 {
+			text-transform: uppercase;
+			padding: 0.5em 1em 1em 1.5em;
+			margin: 0;
+			transform: skew(45deg);
+			-webkit-transform: skew(45deg);
+			-moz-transform: skew(45deg);
+			-o-transform: skew(45deg);
+			a {
+				color: $white;
+				&:link, &:visited {
+					color: $white;
+				}
+				&:hover {
+					border-bottom: 2px solid $white;
+				}
+			}
+		} 
 	}
 }
 

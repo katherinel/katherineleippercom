@@ -19,7 +19,7 @@
 
 #featured_projects.clearfix
 	.padded_container
-		%h3
+		%h3.featured
 			FEATURED PROJECTS See all
 		- Project.featured.each do |p|
 			= render partial: "shared/project_box", locals: { p: p }
