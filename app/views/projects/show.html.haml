@@ -1,0 +1,26 @@
+#project_page
+	%section.info
+		.left_side
+			.page_title{:style => "background-color: ##{@project.image_matching_color}"}
+				%h2= @project.title
+			%figure.cover_image
+				= image_tag(@project.images.first.image.large.url) # fix this later to be default image
+				.caption_outer
+					.caption_corner.top
+					.caption_container
+						%figcaption= @project.short_description
+					.caption_corner.bottom
+		.right_side
+			%dl
+				%dt= "Project Year(s):"
+				%dd= "#{ @project.begin_year }-#{@project.end_year}"
+				%dt= "Project Categories:"
+				%dd= "fill me in"
+				%dt= "Project Type:"
+				%dd= "fill me in"
+	%section.details
+		.padded_container
+			.left_side
+				= 'images here'
+			.right_side
+				= "#{ @project.long_description }"

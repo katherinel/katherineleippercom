@@ -6,7 +6,4 @@
 				= "#{c.name}"
 .padded_container
 	- @projects.each do |p|
-		.proj_box
-			%p= "#{ p.begin_year }"
-			%p= "#{ p.end_year }"
-			%h3= "#{p.title}"
+		= render partial: "shared/project_box", locals: { p: p }
