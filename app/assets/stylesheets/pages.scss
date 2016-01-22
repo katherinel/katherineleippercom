@@ -291,59 +291,80 @@ $blurb_size: 2em;
 		background-color: $light-gray;
 		display: inline-block;
 		width: 100%;
-	}
-	.left_side, .right_side {
-		float: left;
-		margin-top: -$splash_size;
-	}
-	.left_side {
-		width: 60%;
-		figure.cover_image {
-			overflow: hidden;
+
+		.left_side, .right_side {
+			float: left;
+			margin-top: -$splash_size;
 		}
-		.caption_outer {
-			position: absolute;
-			right: -20%;
-			bottom: 0px;
-			margin-left: 10%;
-			.caption_corner {
-				height: 0;
-				width: 50%;
-				&.top {
-					border-bottom: $splash_size solid rgba(255, 255, 255, 0.7);
-					border-left: $splash_size solid transparent;
-				}
-				&.bottom {
-					border-top: $splash_size solid rgba(255, 255, 255, 0.7);
-					border-right: $splash_size solid transparent;
+		.left_side {
+			width: 60%;
+			figure.cover_image {
+				overflow: hidden;
+				img {
+					display: block;
 				}
 			}
-			.caption_container {
-				background-color: rgba(255, 255, 255, 0.7);
-				padding: 0 $splash_size/2;
-				width: 50%;
-				figcaption {
-					font-size: 1.5em;
-					font-family: "ConduitITCMediumItalic", Arial, Helvetica, sans-serif;
-					line-height: 1.2em;
+			.caption_outer {
+				position: absolute;
+				left: 40%;
+				bottom: 0px;
+				margin-left: 10%;
+				.caption_corner {
+					height: 0;
+					width: 50%;
+					min-width: 400px;
+					&.top {
+						border-bottom: $splash_size solid rgba(255, 255, 255, 0.7);
+						border-left: $splash_size solid transparent;
+					}
+					&.bottom {
+						border-top: $splash_size solid rgba(255, 255, 255, 0.7);
+						border-right: $splash_size solid transparent;
+					}
+				}
+				.caption_container {
+					background-color: rgba(255, 255, 255, 0.7);
+					padding: 0 $splash_size/2;
+					width: 50%;
+					min-width: 400px;
+					figcaption {
+						font-size: 1.5em;
+						font-family: "ConduitITCMediumItalic", Arial, Helvetica, sans-serif;
+						line-height: 1.2em;
+					}
+				}
+			}
+		}
+		.right_side {
+			width: 40%;
+			border-top: $splash_size solid $light-gray;
+			dl {
+				padding: 0 $splash_size $splash_size $splash_size;
+				font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				dt {
+					color: $med-gray;
+				}
+				dd {
+					color: $dark-gray;
+					margin-bottom: 1em;
 				}
 			}
 		}
 	}
-	.right_side {
-		width: 40%;
-		border-top: $splash_size solid $light-gray;
-		dl {
-			padding: 0 $splash_size $splash_size $splash_size;
-			font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
-			font-size: 1.2em;
-			dt {
-				color: $med-gray;
-			}
-			dd {
-				color: $dark-gray;
-				margin-bottom: 1em;
-			}
+	section.details {
+		.left_side, .right_side {
+			float: left;
+			width: 50%;
+			padding-top: 3em;
+			padding-bottom: 3em;
+		}
+		.left_side {
+		}
+		.right_side {
+			p {
+				padding-left: 0.5em;
+			}	
 		}
 	}
 	.page_title {
