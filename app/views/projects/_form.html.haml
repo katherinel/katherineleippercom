@@ -16,6 +16,10 @@
 		= f.label :long_description
 		= f.text_area :long_description
 	.form_line
+		= f.collection_check_boxes :category_ids, Category.all, :id, :name do |c|
+			= c.check_box
+			= c.label
+	.form_line
 		= f.label :image_matching_color, 'Image color match: #'
 		= f.text_field :image_matching_color, :maxlength => 6
 

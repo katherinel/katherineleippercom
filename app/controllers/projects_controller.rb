@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 	def new
 		@project = Project.new
 		@project.images.build
+		@categories = Category.all
 	end
 
 	def create
@@ -29,11 +30,12 @@ class ProjectsController < ApplicationController
 
 	def edit
 		@project = Project.find(params[:id])
+		@categories = Category.all
 	end
 
 	private
 
 	def project_params
-		params.require(:project).permit(:id, :title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:id, :image, :_destroy])
+		params.require(:project).permit(:id, :title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:id, :image, :_destroy], category_ids: [])
 	end
 end
