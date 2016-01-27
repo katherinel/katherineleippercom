@@ -1,9 +1,11 @@
 .padded_container
 	%ul#cat_filters
+		%li.select_all
+			= link_to "Select All", projects_path(:category => Category.all.map(&:id))
 		- @categories.each do |c|
 			%li
-				%span.checkbox
-				= "#{c.name}"
+				%span.checkbox{:class => checked_category(c.id)}
+				= link_to "#{c.name}", projects_path(:category => [c.id])
 .padded_container
 	- @projects.each do |p|
 		= render partial: "shared/project_box", locals: { p: p }

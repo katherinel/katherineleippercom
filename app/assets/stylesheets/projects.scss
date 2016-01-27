@@ -10,11 +10,45 @@ ul#cat_filters {
 		color: $med-gray;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
+		&:hover {
+			.checkbox {
+				background-color: $light-gray;
+			}
+		}
+		&.select_all {
+			margin-left: 1.5%;
+			a:hover {
+				border-bottom: 2px solid $med-gray;
+			}
+		}
 		.checkbox {
 			width: 0.5em;
 			height: 0.5em;
 			border: 3px solid $med-gray;
 			display: inline-block;
+			position: relative;
+			&.checked {
+				&:after {
+					content: " ";
+					width: 0.2em;
+					height: 0.5em;
+					position: absolute;
+					left: 50%;
+					top: -50%;
+					border-bottom: 3px solid $med-gray;
+					border-right: 3px solid $med-gray;
+					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+ 					-moz-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+				}
+			}
+		}
+		a {
+			color: $med-gray;
+			&:hover {
+				border-bottom: none;
+			}
 		}
 	}
 }

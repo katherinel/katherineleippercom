@@ -2,7 +2,11 @@ class ProjectsController < ApplicationController
 	http_basic_authenticate_with name: "admin", password: ENV["SITE_PASSWORD"], only: [:new, :edit, :destroy]
 
 	def index
-		@projects = Project.all
+		if params[:category]
+    	@projects = Project.joins(:categories).where(categories: {id: params[:category]}).uniq
+  	else
+			@projects = Project.all
+		end
 		@categories = Category.all
 	end
 	

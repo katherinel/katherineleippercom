@@ -15,7 +15,7 @@
 				%dt= "Project Year(s):"
 				%dd= "#{ @project.begin_year }-#{@project.end_year}"
 				%dt= "Project Categories:"
-				%dd= "fill me in"
+				%dd= @project.categories.map(&:name).join(", ")
 				%dt= "Project Type:"
 				%dd= "fill me in"
 	%section.details
