@@ -5,7 +5,8 @@
 		.blurb
 			.edge.top
 			%p= "Specializing in front-end dev, with professional experience in full stack Ruby on Rails."
-			%span.continue.arrow_link= "Don't take my word for it"
+			%span.continue
+				= link_to "Don't take my word for it", projects_path(:category => [1]), :class => "arrow_link"
 			.edge.bottom
 
 	.right_side
@@ -14,7 +15,8 @@
 		.blurb
 			.edge.top
 			%p= "Trained in traditional graphic design, with broad expertise in many areas: web, print, logos, branding, and more."
-			%span.continue.arrow_link= "See for yourself"
+			%span.continue
+				= link_to "See for yourself", projects_path(:category => [2]), :class => "arrow_link"
 			.edge.bottom
 
 #featured_projects.clearfix
