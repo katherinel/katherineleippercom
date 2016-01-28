@@ -15,15 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery_nested_form
-
-$(function() {
-	$("#menu_btn").click( function() {
-		$("nav").slideToggle(200);
-	});
-
-	$(window).on("resize", function () {
-		if ($(window).width() > 750) {
-			$("nav").show();
-		}
-	});
-});

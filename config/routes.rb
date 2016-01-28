@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   resources :projects
 
+  match 'edit_projects' => 'projects#edit_projects', via: :get
+
   resources :images
 
   # Example resource route with options:

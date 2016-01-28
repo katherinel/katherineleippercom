@@ -5,4 +5,4 @@
 			= fi.file_field :image
 		.form_line
 			= fi.label :is_default, 'This is the default image'
-			= fi.check_box :is_default 
+			= fi.radio_button :is_default, true, :class => "is_default_button", :onclick => "uncheck_other_buttons(this)"

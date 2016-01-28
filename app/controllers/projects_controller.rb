@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-	http_basic_authenticate_with name: "admin", password: ENV["SITE_PASSWORD"], only: [:new, :edit, :destroy]
+	http_basic_authenticate_with name: "admin", password: ENV["SITE_PASSWORD"], only: [:new, :edit, :edit_projects, :destroy]
 
 	def index
 		if params[:category]
@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
 				format.html { redirect_to action: "index" }
 			else
 				flash[:error] = @project.errors.full_messages.to_sentence
-				format.html { redirect_to action: "new" }
+				format.html { render action: "new" }
 			end
 		end
 	end
@@ -37,9 +37,19 @@ class ProjectsController < ApplicationController
 		@categories = Category.all
 	end
 
+	def edit_projects
+		@projects = Project.all
+	end
+
+	def destroy
+	  @project = Project.find(params[:id])
+	  @project.destroy
+	  redirect_to :action => 'edit_projects'
+	end
+
 	private
 
 	def project_params
-		params.require(:project).permit(:id, :title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:id, :image, :_destroy], category_ids: [])
+		params.require(:project).permit(:id, :title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:id, :image, :is_default, :_destroy], category_ids: [])
 	end
 end

@@ -388,6 +388,15 @@ $blurb_size: 2em;
 	}
 }
 
+.delete_link {
+	background-color: red;
+	padding: 4px;
+	margin-left: 20px;
+	a {
+		color: white;
+	}
+}
+
 @media screen and (max-device-width: 750px) {
 	.splash {
 		&#dev_design {

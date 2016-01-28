@@ -1,0 +1,8 @@
+.padded_container
+	%h3= "Projects Admin"
+	%ul
+		- @projects.each do |p|
+			%li
+				= link_to "#{p.title}", edit_project_path(p)
+				%span.delete_link
+					= link_to "Delete", p, method: :delete, :data => {:confirm => "Are you sure you want to delete #{p.title}?"}
