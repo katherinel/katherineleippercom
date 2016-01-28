@@ -10,18 +10,6 @@ class Project < ActiveRecord::Base
 	validate :must_check_default_image
 	validate :must_have_category
 
-	def begin_year
-		if self.begin_date != nil
-			self.begin_date.strftime('%Y')
-		end
-	end
-
-	def end_year
-		if self.end_date != nil
-			self.end_date.strftime('%Y')
-		end
-	end
-
 	def self.featured
 		Project.order("end_date DESC").first(3) # fix this later
 	end
@@ -32,5 +20,15 @@ class Project < ActiveRecord::Base
 
 	def must_have_category
 		errors.add(:base, "You must select at least one category") if self.categories.blank?
+	end
+
+	def years
+		begin_year = self.begin_date.strftime('%Y')
+		end_year = self.end_date.nil? ? Time.now.year : self.end_date.strftime('%Y')
+		if begin_year == end_year
+			[begin_year]
+		else
+			[begin_year, end_year]
+		end
 	end
 end

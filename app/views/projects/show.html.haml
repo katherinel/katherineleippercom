@@ -13,7 +13,7 @@
 		.right_side
 			%dl
 				%dt= "Project Year(s):"
-				%dd= "#{ @project.begin_year }-#{@project.end_year}"
+				%dd= @project.years.join("-")
 				%dt= "Project Categories:"
 				%dd= @project.categories.map(&:name).join(", ")
 				%dt= "Project Type:"

@@ -1,7 +1,7 @@
 .proj_box
 	= image_tag(p.images.first.image.small.url, :class => 'proj_image') # fix this later to be default image
 	.proj_years
-		%p.year= "#{ p.begin_year }"
-		%p.year= "#{ p.end_year }"
+		- for year in p.years
+			%p.year= year
 	.proj_title{:style => "#{proj_title_bkgd(p)}"}
 		%h3= link_to "#{p.title}", project_path(p)
