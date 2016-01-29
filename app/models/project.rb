@@ -1,3 +1,5 @@
+require 'date'
+
 class Project < ActiveRecord::Base
 	has_many :images, :dependent => :destroy
 	has_and_belongs_to_many :categories
@@ -22,13 +24,25 @@ class Project < ActiveRecord::Base
 		errors.add(:base, "You must select at least one category") if self.categories.blank?
 	end
 
+	def end_date
+		self[:end_date] || Date.today
+	end
+
 	def years
 		begin_year = self.begin_date.strftime('%Y')
-		end_year = self.end_date.nil? ? Time.now.year : self.end_date.strftime('%Y')
+		end_year = self.end_date.strftime('%Y')
 		if begin_year == end_year
 			[begin_year]
 		else
 			[begin_year, end_year]
 		end
+	end
+
+	def default_image
+		self.images.find_by(is_default: true)
+	end
+
+	def non_default_images
+		self.images.where(is_default: nil)
 	end
 end

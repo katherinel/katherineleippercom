@@ -4,11 +4,11 @@
 			.page_title{:style => "background-color: ##{@project.image_matching_color}"}
 				%h2= @project.title
 			%figure.cover_image
-				= image_tag(@project.images.first.image.large.url) # fix this later to be default image
+				= image_tag(@project.default_image.image.large.url) # fix this later to be default image
 				.caption_outer
 					.caption_corner.top
 					.caption_container
-						%figcaption= @project.short_description
+						%figcaption= @project.short_description.html_safe
 					.caption_corner.bottom
 		.right_side
 			%dl
@@ -21,6 +21,8 @@
 	%section.details
 		.padded_container
 			.left_side
-				= 'images here'
+				- for img in @project.non_default_images
+					%figure.detail_image
+						= image_tag(img.image.medium.url)
 			.right_side
-				%p.long_description= "#{ @project.long_description }"
+				%p.long_description= "#{ @project.long_description }".html_safe

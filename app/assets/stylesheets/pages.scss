@@ -301,6 +301,9 @@ $blurb_size: 2em;
 			figure.cover_image {
 				overflow: hidden;
 				img {
+					margin-left: -moz-calc(50% - 500px);
+    			margin-left: -webkit-calc(50% - 500px);
+    			margin-left: calc(50% - 500px);
 					display: block;
 				}
 			}
@@ -360,10 +363,18 @@ $blurb_size: 2em;
 			padding-bottom: 3em;
 		}
 		.left_side {
+			figure.detail_image {
+				margin-bottom: 1em;
+				img {
+					width: 100%;
+				}
+			}
 		}
 		.right_side {
-			p {
-				padding-left: 0.5em;
+			p.long_description {
+				font-size: 1.2em;
+				line-height: 1.2em;
+				padding-left: 1em;
 			}	
 		}
 	}
