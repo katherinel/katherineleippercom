@@ -2,7 +2,7 @@ function uncheck_other_buttons(btn) {
 	btn_class = $(btn).attr("class");
 	$("."+btn_class).each( function() {
 		if (this != btn) {
-			$(this).removeAttr("checked");
+			this.checked = false;
 		}
 	});
 }

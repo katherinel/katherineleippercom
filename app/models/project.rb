@@ -10,6 +10,7 @@ class Project < ActiveRecord::Base
 	validates :title, :begin_date, :short_description, :long_description, :presence => true
 	validates_format_of :image_matching_color, :with => /[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}/
 	validate :must_check_default_image
+	validate :only_one_default_image
 	validate :must_have_category
 
 	def self.featured
@@ -18,6 +19,10 @@ class Project < ActiveRecord::Base
 
 	def must_check_default_image
 		errors.add(:base, "You must select a default image") if self.images.all?{ |i| i.is_default.blank? }
+	end
+
+	def only_one_default_image
+		errors.add(:base, "You can only have one default image") if self.images.where(is_default: true).length > 1
 	end
 
 	def must_have_category

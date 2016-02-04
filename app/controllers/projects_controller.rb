@@ -37,6 +37,18 @@ class ProjectsController < ApplicationController
 		@categories = Category.all
 	end
 
+	def update
+		@project = Project.find(params[:id])
+		respond_to do |format|
+			if @project.update_attributes(project_params)
+				format.html { redirect_to action: "edit_projects" }
+			else
+				flash[:error] = @project.errors.full_messages.to_sentence
+				format.html { render action: "edit" }
+			end
+		end
+	end
+
 	def edit_projects
 		@projects = Project.all
 	end

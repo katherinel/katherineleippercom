@@ -2,7 +2,11 @@
 	= f.fields_for :images, html: { multipart: true } do |fi|
 		.form_line
 			= fi.label :image
-			= fi.file_field :image
+			- if fi.object.new_record?
+				= fi.file_field :image
+			- else
+				= image_tag(fi.object.image.small.url)
+				= fi.link_to_remove "Delete"
 		.form_line
 			= fi.label :is_default, 'This is the default image'
-			= fi.radio_button :is_default, true, :class => "is_default_button", :onclick => "uncheck_other_buttons(this)"
+			= fi.check_box :is_default, {:checked => form_image_is_default(fi), :class => "is_default_button", :onclick => "uncheck_other_buttons(this)"}
