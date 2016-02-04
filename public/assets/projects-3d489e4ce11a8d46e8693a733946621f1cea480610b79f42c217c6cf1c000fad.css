@@ -1,0 +1,57 @@
+/* line 3, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters {
+  overflow: hidden;
+}
+/* line 5, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li {
+  float: left;
+  margin-right: 1em;
+  font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
+  font-size: 1.75em;
+  color: #808080;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/* line 14, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li:hover .checkbox {
+  background-color: #F1F1F1;
+}
+/* line 18, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li.select_all {
+  margin-left: 1.5%;
+}
+/* line 20, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li.select_all a:hover {
+  border-bottom: 2px solid #808080;
+}
+/* line 24, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li .checkbox {
+  width: 0.5em;
+  height: 0.5em;
+  border: 3px solid #808080;
+  display: inline-block;
+  position: relative;
+}
+/* line 31, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li .checkbox.checked:after {
+  content: " ";
+  width: 0.2em;
+  height: 0.5em;
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  border-bottom: 3px solid #808080;
+  border-right: 3px solid #808080;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+/* line 47, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li a {
+  color: #808080;
+}
+/* line 49, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li a:hover {
+  border-bottom: none;
+}
