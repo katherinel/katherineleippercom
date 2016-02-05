@@ -10,25 +10,26 @@
 		= csrf_meta_tags
 
 	%body
-		#menu_btn
-			%a{:href => "javascript:void(0)"}
-		%header
-			%h1
-				Katherine
-				%span.logo
-				Leipper
-			%h2= "Code, Design, Art /// For the Web and Beyond"
-		%span
-		%nav
-			%ul
-				%li.jobs= link_to "Jobs & Projects", :controller => :projects, :action => :index
-				%li.edu= link_to "Educational Work"
-				%li.about= link_to "Résumé & About"
-		#flash_msgs{:style => "#{flash.empty? ? 'display:none' : ''}"}
-			- flash.each do |key, value|
-				%p{:class => "alert alert-#{key}"}= value
-		#container
-			=yield
+		#everything_but_footer
+			#menu_btn
+				%a{:href => "javascript:void(0)"}
+			%header
+				%h1
+					Katherine
+					%span.logo
+					Leipper
+				%h2= "Code, Design, Art /// For the Web and Beyond"
+			%span
+			%nav
+				%ul
+					%li.jobs= link_to "Jobs & Projects", :controller => :projects, :action => :index
+					%li.edu= link_to "Educational Work"
+					%li.about= link_to "Résumé & About"
+			#flash_msgs{:style => "#{flash.empty? ? 'display:none' : ''}"}
+				- flash.each do |key, value|
+					%p{:class => "alert alert-#{key}"}= value
+			#container
+				=yield
 		%footer
 			%ul
 				%li.ex_link

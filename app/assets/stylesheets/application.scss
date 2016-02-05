@@ -149,8 +149,8 @@ table {
 
 
 body {
-	margin: 15px 0 0 0;
 	font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
+	background-color: $dark-gray;
 }
 
 h1, h2, h3, h4, h5, h6, nav {
@@ -166,6 +166,11 @@ a {
 	&:hover {
 		border-bottom: 2px solid $dark-gray;
 	}
+}
+
+#everything_but_footer {
+	padding: 15px 0;
+	background-color: white;
 }
 
 .arrow_link {
