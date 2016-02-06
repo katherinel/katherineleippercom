@@ -581,10 +581,11 @@ form .form_line {
 	}
 	.proj_image {
 		position: relative;
-		z-index: -2;
+		z-index: 0;
 	}
 	.proj_years {
 		position: absolute;
+		z-index: 1;
 		right: 0;
 		bottom: 0;
 		padding: 3em 1em;
@@ -604,6 +605,7 @@ form .form_line {
 	}
 	.proj_title {
 		position: absolute;
+		z-index: 2;
 		bottom: 0;
 		left: 0;
 		background-color: $dark-gray;
