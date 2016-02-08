@@ -234,6 +234,9 @@ nav {
 			position: relative;
 			height:16px;
 			text-transform: uppercase;
+			.arrow {
+				display: hidden;
+			}
 			&:before, &:after {
 				content: " ";
 				width: 0px;
@@ -250,6 +253,17 @@ nav {
 				right: -44px;
 				border-right: 44px solid transparent;
 				border-top: 44px solid;
+			}
+			&.highlighted .arrow {
+				display: block;
+				width: 0;
+				height: 0;
+				position: absolute;
+				right: 50%;
+				bottom: -0.5em;
+				border-top: 0.5em solid $dark-gray;
+				border-left: 0.5em solid transparent;
+				border-right: 0.5em solid transparent;
 			}
 			&:nth-child(1) {
 				background-color: $creamsicle;
@@ -727,24 +741,25 @@ form .form_line {
 			}	
 		}
 	}
-	.page_title {
-		height: $splash_size;
-		width: 100%;
-		margin-left: $splash_size/2;
-		transform: skew(-45deg);
-		-webkit-transform: skew(-45deg);
-		-moz-transform: skew(-45deg);
-		-o-transform: skew(-45deg);
-		h2 {
-			color: $white;
-			text-transform: uppercase;
-			font-size: 2em;
-			padding: .3em .8em;
-			transform: skew(45deg);
-			-webkit-transform: skew(45deg);
-			-moz-transform: skew(45deg);
-			-o-transform: skew(45deg);
-		}
+}
+
+.banner_title {
+	height: $splash_size;
+	width: 100%;
+	margin-left: $splash_size/2;
+	transform: skew(-45deg);
+	-webkit-transform: skew(-45deg);
+	-moz-transform: skew(-45deg);
+	-o-transform: skew(-45deg);
+	h2 {
+		color: $white;
+		text-transform: uppercase;
+		font-size: 2em;
+		padding: .3em .8em;
+		transform: skew(45deg);
+		-webkit-transform: skew(45deg);
+		-moz-transform: skew(45deg);
+		-o-transform: skew(45deg);
 	}
 }
 
@@ -754,6 +769,71 @@ form .form_line {
 	margin-left: 20px;
 	a {
 		color: white;
+	}
+}
+
+#educational {
+	main {
+		font-size: 2em;
+		background-color: $light-teal;
+		padding: 0.5em 0;
+		position: relative;
+		&:before {
+			content: " ";
+			width: 0px;
+	    height: 0px;
+	    position: absolute;
+	    top: 0;
+			left: 0;
+	    border-right: 2em solid transparent;
+	    border-top: 2em solid white;
+		}
+	}
+	figure.main_image {
+		width: 30%;
+		float: left;
+		padding-left: 120px;
+		background-color: $light-teal;
+		img {
+			width: 100%;
+			vertical-align: bottom;
+		}
+	}
+	.secondary_blurb {
+		margin: 1em 120px 1em 1em;
+		font-size: 1.4em;
+		float: left;
+		line-height: 1.2em;
+		width: 45%;
+	}
+	section.details {
+		clear: both;
+		margin-bottom: 3em;
+		display: inline-block;
+		.banner_title {
+			background-color: $teal;
+		}
+		.left_side, .right_side {
+			float: right;
+		}
+		.left_side {
+			padding-top: 3.5em;
+			width: 35%;
+		}
+		.right_side {
+			width: 65%;
+		}
+		p {
+			line-height: 1.2em;
+			padding-right: 1em;
+			a {
+				font-family: "ConduitITC-Bold", Arial, Helvetica, sans-serif;
+				font-weight: bold;
+			}
+		}
+		figure img {
+			width: 100%;
+		}
 	}
 }
 

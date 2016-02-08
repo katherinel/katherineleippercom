@@ -22,9 +22,15 @@
 			%span
 			%nav
 				%ul
-					%li.jobs= link_to "Jobs & Projects", :controller => :projects, :action => :index
-					%li.edu= link_to "Educational Work"
-					%li.about= link_to "Résumé & About"
+					%li.jobs{:class => menu_highlight("projects")}
+						= link_to "Jobs & Projects", :controller => :projects, :action => :index
+						.arrow
+					%li.edu{:class => menu_highlight("educational")}
+						= link_to "Educational Work", :controller => :pages, :action => :educational
+						.arrow
+					%li.about{:class => menu_highlight("about")}
+						= link_to "Résumé & About", :controller => :pages, :action => :about
+						.arrow
 			#flash_msgs{:style => "#{flash.empty? ? 'display:none' : ''}"}
 				- flash.each do |key, value|
 					%p{:class => "alert alert-#{key}"}= value

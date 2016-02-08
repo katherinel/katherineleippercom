@@ -25,6 +25,13 @@ Rails.application.routes.draw do
 
   resources :images
 
+  resources :pages do
+    collection do 
+      get 'educational'
+      get 'about'
+    end
+  end
+
   # Example resource route with options:
   #   resources :products do
   #     member do

@@ -1,7 +1,7 @@
 #project_page
 	%section.info
 		.left_side
-			.page_title{:style => "background-color: ##{@project.image_matching_color}"}
+			.banner_title{:style => "background-color: ##{@project.image_matching_color}"}
 				%h2= @project.title
 			%figure.cover_image
 				= image_tag(@project.default_image.image.large.url) # fix this later to be default image
