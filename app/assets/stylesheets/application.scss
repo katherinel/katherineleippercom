@@ -973,6 +973,40 @@ form .form_line {
 			}
 		}
 	}
+	.padded_container {
+		padding: 0 20px;
+	}
+	#educational {
+		main:before {
+			border-top-width: 0.8em;
+			border-right-width: 0.8em;
+		}
+		figure.main_image {
+			float: none;
+			width: inherit;
+			padding: 0;
+		}
+		.secondary_blurb {
+			width: inherit;
+			margin-right: 1em;
+		}
+		section.details {
+			.banner_title {
+				margin-left: 0;
+				width: 120%;
+			}
+			figure {
+				margin: 0 -1.4em;
+			}
+			.left_side, .right_side {
+				float: none;
+				width: inherit;
+			}
+			.left_side {
+				padding-top: 1em;
+			}
+		}
+	}
 	.proj_box {
 		float: none;
 		width: 100%;
