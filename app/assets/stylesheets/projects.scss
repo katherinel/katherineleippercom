@@ -5,7 +5,7 @@ ul#cat_filters {
 	li {
 		float: left;
 		margin-right: 1em;
-		font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
+		font-family: "ConduitITCMedium", Arial, Helvetica, sans-serif;
 		font-size: 1.75em;
 		color: $med-gray;
 		text-transform: uppercase;
@@ -50,5 +50,11 @@ ul#cat_filters {
 				border-bottom: none;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	ul#cat_filters li {
+		width: 100%;
 	}
 }
