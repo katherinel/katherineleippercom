@@ -167,6 +167,10 @@ a {
 		border-bottom: 2px solid $dark-gray;
 	}
 }
+p a {
+	font-family: "ConduitITC-Bold", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
 
 #everything_but_footer {
 	padding: 15px 0;
@@ -771,11 +775,29 @@ form .form_line {
 		color: white;
 	}
 }
-
 #educational {
 	main {
-		font-size: 2em;
 		background-color: $light-teal;
+	}
+	figure.main_image {
+		background-color: $light-teal;
+	}
+}
+#about {
+	main {
+		background-color: $light-purple;
+		p {
+			text-align: center;
+		}
+	}
+	figure.main_image {
+		background-color: $light-purple;
+	}
+}
+
+#educational, #about {
+	main {
+		font-size: 2em;
 		padding: 0.5em 0;
 		position: relative;
 		&:before {
@@ -793,7 +815,6 @@ form .form_line {
 		width: 30%;
 		float: left;
 		padding-left: 120px;
-		background-color: $light-teal;
 		img {
 			width: 100%;
 			vertical-align: bottom;
@@ -826,10 +847,6 @@ form .form_line {
 		p {
 			line-height: 1.2em;
 			padding-right: 1em;
-			a {
-				font-family: "ConduitITC-Bold", Arial, Helvetica, sans-serif;
-				font-weight: bold;
-			}
 		}
 		figure img {
 			width: 100%;
@@ -976,7 +993,7 @@ form .form_line {
 	.padded_container {
 		padding: 0 20px;
 	}
-	#educational {
+	#educational, #about {
 		main:before {
 			border-top-width: 0.8em;
 			border-right-width: 0.8em;
