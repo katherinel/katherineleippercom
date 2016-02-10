@@ -667,9 +667,11 @@ form .form_line {
 			margin-top: -$splash_size;
 		}
 		.left_side {
+			position: relative;
 			width: 60%;
 			figure.cover_image {
 				overflow: hidden;
+				position: relative;
 				img {
 					margin-left: -moz-calc(50% - 500px);
     			margin-left: -webkit-calc(50% - 500px);
@@ -679,8 +681,8 @@ form .form_line {
 			}
 			.caption_outer {
 				position: absolute;
-				left: 40%;
-				bottom: 0px;
+				left: 60%;
+				bottom: 10%;
 				margin-left: 10%;
 				.caption_corner {
 					height: 0;
@@ -998,6 +1000,35 @@ form .form_line {
 	}
 	#featured_projects {
 		min-width: inherit;
+	}
+	#project_page {
+		section.info {
+			.left_side, .right_side {
+				width: 100%;
+			}
+			.left_side {
+				.caption_outer {
+					margin-left: 0;
+					left: 0;
+					bottom: 1em;
+					.caption_corner, .caption_container {
+						width: inherit;
+						min-width: inherit;
+					}
+				}
+			}
+			.right_side {
+				margin-top: 0;
+			}
+		}
+		section.details {
+			.left_side, .right_side {
+				width: 100%;
+			}
+			.right_side {
+				padding-top: 0;
+			}
+		}
 	}
 	#educational, #about {
 		main:before {
