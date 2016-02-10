@@ -48,6 +48,6 @@ class Project < ActiveRecord::Base
 	end
 
 	def non_default_images
-		self.images.where(is_default: nil)
+		self.images.where(is_default: nil || false)
 	end
 end
