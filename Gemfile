@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml', '~>4.0.7'
 
+gem 'fog', require: 'fog/aws'
 gem 'carrierwave', '~> 0.9'
 gem 'mini_magick'
 
