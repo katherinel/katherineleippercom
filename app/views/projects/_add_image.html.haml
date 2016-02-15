@@ -3,7 +3,7 @@
 		.form_line
 			= fi.label :image
 			- if fi.object.new_record?
-				= fi.file_field :image
+				=# fi.file_field :image
 			- else
 				= image_tag(fi.object.image.small.url)
 				= fi.link_to_remove "Delete"

@@ -28,6 +28,8 @@ gem 'haml', '~>4.0.7'
 gem 'fog', require: 'fog/aws'
 gem 'carrierwave', '~> 0.9'
 gem 'mini_magick'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 
 gem 'nested_form'
 

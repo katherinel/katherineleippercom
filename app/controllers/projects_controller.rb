@@ -17,11 +17,15 @@ class ProjectsController < ApplicationController
 	def new
 		@project = Project.new
 		@project.images.build
+		@uploader = Image.new.image
+		@uploader.success_action_redirect = edit_projects_path
 		@categories = Category.all
 	end
 
 	def create
 		@project = Project.new(project_params)
+		@uploader = Image.new.image
+		@image = Image.new(key: params[:key])
 		respond_to do |format|
 			if @project.save
 				format.html { redirect_to action: "index" }
