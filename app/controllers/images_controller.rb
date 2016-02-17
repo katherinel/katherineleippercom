@@ -14,7 +14,7 @@ class ImagesController < ApplicationController
 
   # GET /images/new
   def new
-    @image = Image.new
+    @image = Image.new(key: params[:key])
   end
 
   # GET /images/1/edit
@@ -28,8 +28,8 @@ class ImagesController < ApplicationController
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
-        format.json { render :show, status: :created, location: @image }
+        format.html { redirect_to action: "edit_projects", controller: "projects" }
+        #format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
         format.json { render json: @image.errors, status: :unprocessable_entity }
@@ -69,6 +69,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.require(:image).permit(:project_id, :image, :is_default)
+      params.require(:image).permit(:key, :project_id, :image, :is_default)
     end
 end

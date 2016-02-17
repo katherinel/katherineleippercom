@@ -6,3 +6,10 @@
 				= link_to "#{p.title}", edit_project_path(p)
 				%span.delete_link
 					= link_to "Delete", p, method: :delete, :data => {:confirm => "Are you sure you want to delete #{p.title}?"}
+	%h3= "Uploaded Images"
+	= direct_upload_form_for @uploader do |fu|
+		= fu.file_field :image
+		= fu.submit "Upload Image"
+
+	- for i in @unattached_images
+		= image_tag(i.image.url)

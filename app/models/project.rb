@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
 	has_and_belongs_to_many :categories
 	before_destroy { categories.clear }
 	accepts_nested_attributes_for :images, allow_destroy: true
-	validates_presence_of :images
+	#validates_presence_of :images
 	validates_associated :images
 	validates :title, :begin_date, :short_description, :long_description, :presence => true
 	validates_format_of :image_matching_color, :with => /[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}/

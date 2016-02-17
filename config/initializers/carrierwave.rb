@@ -1,9 +1,10 @@
 CarrierWave.configure do |config|
   #config.root = Rails.root.join('tmp') # adding these...
   #config.cache_dir = 'carrierwave' # ...two lines
-  if Rails.env.development?
-    config.storage = :file
-  elsif Rails.env.test?
+  # if Rails.env.development?
+  #   config.storage = :file
+  # elsif Rails.env.test?
+  if Rails.env.test?
     config.storage = :file
     config.enable_processing = false
   else

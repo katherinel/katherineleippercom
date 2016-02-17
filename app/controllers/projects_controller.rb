@@ -17,8 +17,6 @@ class ProjectsController < ApplicationController
 	def new
 		@project = Project.new
 		@project.images.build
-		@uploader = Image.new.image
-		@uploader.success_action_redirect = edit_projects_path
 		@categories = Category.all
 	end
 
@@ -55,6 +53,9 @@ class ProjectsController < ApplicationController
 
 	def edit_projects
 		@projects = Project.all
+		@unattached_images = Image.all.where(:project_id => nil)
+		@uploader = Image.new.image
+		@uploader.success_action_redirect = new_image_url
 	end
 
 	def destroy
