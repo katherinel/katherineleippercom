@@ -12,4 +12,4 @@
 		= fu.submit "Upload Image"
 
 	- for i in @unattached_images
-		= image_tag(i.image.url)
+		= image_tag i.image.url :small
