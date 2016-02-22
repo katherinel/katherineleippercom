@@ -5,7 +5,7 @@ ul#cat_filters {
 	li {
 		float: left;
 		margin-right: 1em;
-		font-family: "ConduitITCMedium", Arial, Helvetica, sans-serif;
+		font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
 		font-size: 1.75em;
 		color: $med-gray;
 		text-transform: uppercase;
@@ -24,7 +24,7 @@ ul#cat_filters {
 		.checkbox {
 			width: 0.5em;
 			height: 0.5em;
-			border: 3px solid $med-gray;
+			border: 2px solid $med-gray;
 			display: inline-block;
 			position: relative;
 			&.checked {
