@@ -1,11 +1,12 @@
 @import 'colors';
+@import 'fonts';
 
 ul#cat_filters {
 	overflow: hidden;
 	li {
 		float: left;
 		margin-right: 1em;
-		font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
+		font: $conduit_light;
 		font-size: 1.75em;
 		color: $med-gray;
 		text-transform: uppercase;

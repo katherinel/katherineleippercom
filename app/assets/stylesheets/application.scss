@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'fonts';
 
 $splash_size: 3em;
 $blurb_size: 2em;
@@ -150,12 +151,12 @@ table {
 
 
 body {
-	font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
+	font: $conduit_light;
 	background-color: $dark-gray;
 }
 
 h1, h2, h3, h4, h5, h6, nav {
-	font-family: "ConduitITCMedium", Arial, Helvetica, sans-serif;
+	font: $conduit_medium;
 	color: $dark-gray;
 }
 
@@ -168,9 +169,11 @@ a {
 		border-bottom: 2px solid $dark-gray;
 	}
 }
-p a {
-	font-family: "ConduitITC-Bold", Arial, Helvetica, sans-serif;
-	font-weight: bold;
+p {
+	color: $dark-gray;
+	a {
+		font: $conduit_bold;
+	}
 }
 
 #everything_but_footer {
@@ -201,7 +204,7 @@ header {
 	margin: auto;
 	text-align: center;
 	h1, h2 {
-		font-family: "ConduitITCBoldItalic", Arial, Helvetica, sans-serif;
+		font: $conduit_bold_italic;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
 	}
@@ -484,8 +487,8 @@ form .form_line {
 			-webkit-transform: skew(45deg);
 	   	-moz-transform: skew(45deg);
 	    -o-transform: skew(45deg);
+			font: $conduit_light;
 			font-size: 5.7em;
-			font-family: "ConduitITCLight", Arial, Helvetica, sans-serif;
 			letter-spacing: 0.05em;
 			color: $white;
 			opacity: 0.5;
@@ -500,14 +503,14 @@ form .form_line {
     padding: 0 $blurb_size;
     background: rgba(255, 255, 255, .7);
     p {
+    	font: $conduit_light_italic;
     	font-size: 1.5em;
-    	font-family: "ConduitITCLightItalic", Arial, Helvetica, sans-serif;
     	line-height: 1.4em;
     	margin-bottom: 0.5em;
     }
     .continue {
-    	font-size: 1.25em;
-    	font-family: "ConduitITCBold";
+    	font: $conduit_bold;
+     	font-size: 1.25em;
     	float: right;
     }
     .edge {
@@ -703,8 +706,8 @@ form .form_line {
 					width: 50%;
 					min-width: 400px;
 					figcaption {
+						font: $conduit_medium_italic;
 						font-size: 1.5em;
-						font-family: "ConduitITCMediumItalic", Arial, Helvetica, sans-serif;
 						line-height: 1.2em;
 					}
 				}
@@ -715,7 +718,7 @@ form .form_line {
 			border-top: $splash_size solid $light-gray;
 			dl {
 				padding: 0 $splash_size $splash_size $splash_size;
-				font-family: "ConduitITCBold", Arial, Helvetica, sans-serif;
+				font: $conduit_bold;
 				font-size: 1.2em;
 				dt {
 					color: $med-gray;
