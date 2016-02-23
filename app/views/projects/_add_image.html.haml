@@ -1,12 +1,7 @@
 #image_form
-	= f.fields_for :images, html: { multipart: true } do |fi|
-		.form_line
-			= fi.label :image
-			- if fi.object.new_record?
-				=# fi.file_field :image
-			- else
-				= image_tag(fi.object.image.small.url)
-				= fi.link_to_remove "Delete"
-		.form_line
-			= fi.label :is_default, 'This is the default image'
-			= fi.check_box :is_default, {:checked => form_image_is_default(fi), :class => "is_default_button", :onclick => "uncheck_other_buttons(this)"}
+	%h2= "Add Images"
+	= f.collection_check_boxes :image_ids, @unattached_images, :id, :image do |ui|
+		- ui_image = @unattached_images.detect{|i| i.id == ui.value }
+		= ui.check_box
+		= image_tag ui_image.image.url(:small)
+		= label_tag :is_default

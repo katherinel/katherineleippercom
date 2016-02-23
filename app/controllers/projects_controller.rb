@@ -18,6 +18,7 @@ class ProjectsController < ApplicationController
 		@project = Project.new
 		@project.images.build
 		@categories = Category.all
+		@unattached_images = Image.all.where(:project_id => nil)
 	end
 
 	def create
@@ -37,6 +38,7 @@ class ProjectsController < ApplicationController
 	def edit
 		@project = Project.find(params[:id])
 		@categories = Category.all
+		@unattached_images = Image.all.where(:project_id => nil)
 	end
 
 	def update
@@ -67,6 +69,6 @@ class ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:id, :title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, images_attributes: [:id, :image, :is_default, :_destroy], category_ids: [])
+		params.require(:project).permit(:id, :title, :short_description, :long_description, :begin_date, :end_date, :image_matching_color, :default_image_id, image_ids: [], category_ids: [])
 	end
 end
