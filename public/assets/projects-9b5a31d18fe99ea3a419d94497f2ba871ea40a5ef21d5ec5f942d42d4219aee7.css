@@ -1,0 +1,65 @@
+/* line 4, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters {
+  overflow: hidden;
+  min-width: 900px;
+}
+/* line 7, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li {
+  float: left;
+  margin-right: 1em;
+  font: 100 1em "ConduitITCLight", Arial, Helvetica, sans-serif;
+  font-size: 1.75em;
+  color: #808080;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+/* line 16, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li:hover .checkbox {
+  background-color: #F1F1F1;
+}
+/* line 20, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li.select_all {
+  margin-left: 1.5%;
+}
+/* line 22, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li.select_all a:hover {
+  border-bottom: 2px solid #808080;
+}
+/* line 26, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li .checkbox {
+  width: 0.5em;
+  height: 0.5em;
+  border: 2px solid #808080;
+  display: inline-block;
+  position: relative;
+}
+/* line 33, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li .checkbox.checked:after {
+  content: " ";
+  width: 0.2em;
+  height: 0.5em;
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  border-bottom: 3px solid #808080;
+  border-right: 3px solid #808080;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+/* line 49, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li a {
+  color: #808080;
+}
+/* line 51, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+ul#cat_filters li a:hover {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 750px) {
+  /* line 59, /Users/kleipper/Documents/code/katherineleippercom/app/assets/stylesheets/projects.scss */
+  ul#cat_filters li {
+    width: 100%;
+  }
+}
