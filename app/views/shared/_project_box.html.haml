@@ -1,5 +1,5 @@
 .proj_box
-	= image_tag(Image.find(p.default_image_id).url(:small), :class => 'proj_image')
+	= image_tag(Image.find(p.default_image_id).image.url(:small), :class => 'proj_image')
 	.proj_years
 		- for year in p.years
 			%p.year= year
