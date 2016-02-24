@@ -207,10 +207,16 @@ header {
 		font: $conduit_bold_italic;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
+		a:hover {
+			border-bottom: none;
+		}
 	}
 	h1 {
 		font-size: 3.125em;
 		margin-bottom: 0.25em;
+		a:hover {
+			color: $med-gray;
+		}
 	}
 	h2 {
 		font-size: 1.5em;
