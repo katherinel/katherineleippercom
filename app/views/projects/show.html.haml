@@ -4,7 +4,7 @@
 			.banner_title{:style => "background-color: ##{@project.image_matching_color}"}
 				%h2= @project.title
 			%figure.cover_image
-				= image_tag(@project.default_image.image.large.url) # fix this later to be default image
+				= image_tag(Image.find(@project.default_image_id).image.url(:large))
 			.caption_outer
 				.caption_corner.top
 				.caption_container
@@ -19,7 +19,7 @@
 	%section.details
 		.padded_container
 			.left_side
-				- for img in @project.non_default_images
+				- for img in @project.images.where('id NOT IN (?)', [@project.default_image_id])
 					%figure.detail_image
 						= image_tag(img.image.medium.url)
 			.right_side
