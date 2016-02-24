@@ -4,4 +4,5 @@
 		- ui_image = @unattached_images.detect{|i| i.id == ui.value }
 		= ui.check_box
 		= image_tag ui_image.image.url(:small)
-		= label_tag :is_default
+		= label_tag "Default Image"
+		= f.check_box :default_image_id, {}, ui_image.id
