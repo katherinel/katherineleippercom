@@ -1039,6 +1039,9 @@ form .form_line {
 			}
 		}
 	}
+}
+
+@media screen and (max-width: 750px) {
 	#educational, #about {
 		main:before {
 			border-top-width: 0.8em;
@@ -1070,8 +1073,10 @@ form .form_line {
 			}
 		}
 	}
+
 	.proj_box {
 		float: none;
 		width: 100%;
+		margin-left: 0;
 	}
 }
