@@ -10,6 +10,7 @@ class Project < ActiveRecord::Base
 	validates :title, :begin_date, :short_description, :long_description, :default_image_id, :presence => true
 	validates_format_of :image_matching_color, :with => /[A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}/
 	validate :must_have_category
+	default_scope order("end_date DESC")
 
 	def self.featured
 		Project.order("end_date DESC").first(3) # fix this later
