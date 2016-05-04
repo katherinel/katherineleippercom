@@ -32,6 +32,8 @@ Rails.application.routes.draw do
     end
   end
 
+  match 'NFCscan' => 'pages#contact_form', via: :get
+
   # Example resource route with options:
   #   resources :products do
   #     member do
