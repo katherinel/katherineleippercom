@@ -1,5 +1,6 @@
 @ContactForm = React.createClass
 	getInitialState: ->
+		displayForm: true
 		name: ''
 		email: 'email'
 		phone: 'phone number'
@@ -12,14 +13,10 @@
 	handleSubmit: (e) ->
 		e.preventDefault()
 		$.post '/contacts', { contact: @state }, (data) => 
-			@handleNewContact data
-			@setState @getInitialState()
+			@setState displayForm: false
 		, 'JSON'
 
-	handleNewContact: (contact) ->
-		# tbd
-
-	render: ->
+	showForm: ->
 		React.DOM.form
 			className: 'nfc_contact_form padded_container'
 			onSubmit: @handleSubmit
@@ -62,3 +59,14 @@
 					React.DOM.button
 						type: 'submit'
 						'Keep in touch'
+
+	showComplete: ->
+		React.DOM.div
+			className: 'padded_container'
+			React.DOM.h2 null, "Nice to meet you at #{ @state.met }, #{ @state.name }!"
+
+	render: ->
+		if @state.displayForm
+			@showForm()
+		else
+			@showComplete()
