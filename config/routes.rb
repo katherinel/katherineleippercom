@@ -29,11 +29,12 @@ Rails.application.routes.draw do
     collection do 
       get 'educational'
       get 'about'
-      post 'create_contact'
     end
   end
 
-  match 'NFCscan' => 'pages#contact_form', via: :get
+  match 'NFCscan' => 'contacts#new', via: :get
+
+  resources :contacts
 
   # Example resource route with options:
   #   resources :products do

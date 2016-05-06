@@ -11,14 +11,13 @@
 
 	handleSubmit: (e) ->
 		e.preventDefault()
-		$.post '/pages/create_contact', { contact: @state }, (data) => 
-			@props.handleNewContact data
+		$.post '/contacts', { contact: @state }, (data) => 
+			@handleNewContact data
 			@setState @getInitialState()
 		, 'JSON'
 
-	handelNewContact: (contact) ->
-		console.log("handle new contact")
-		console.log(data)
+	handleNewContact: (contact) ->
+		# tbd
 
 	render: ->
 		React.DOM.form
