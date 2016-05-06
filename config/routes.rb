@@ -29,6 +29,7 @@ Rails.application.routes.draw do
     collection do 
       get 'educational'
       get 'about'
+      post 'create_contact'
     end
   end
 
