@@ -1,14 +1,25 @@
 @ContactForm = React.createClass
 	getInitialState: ->
 		displayForm: true
-		name: ''
-		email: 'email'
-		phone: 'phone number'
-		met: ''
+		name: this.props.placeholders.name
+		email: this.props.placeholders.email
+		phone: this.props.placeholders.phone
+		met: this.props.placeholders.met
 
 	handleChange: (e) ->
 		name = e.target.name
 		@setState "#{ name }": e.target.value
+
+	clearDefault: (e) ->
+		if (e.target.value == this.props.placeholders["#{ e.target.name }"]) # if the target's value equals the original props value
+			e.target.value = ''
+			console.log('clear default')
+			console.log(@state)
+
+	resetToDefault: (e) ->
+		if (e.target.value == '')
+			e.target.value = this.props.placeholders["#{ e.target.name }"]
+			@setState "#{ name }": e.target.value
 
 	handleSubmit: (e) ->
 		e.preventDefault()
@@ -38,6 +49,8 @@
 						name: 'email'
 						value: @state.email
 						onChange: @handleChange
+						onFocus: @clearDefault
+						onBlur: @resetToDefault
 
 					React.DOM.label null, ' and/or '
 					React.DOM.input
@@ -45,6 +58,8 @@
 						name: 'phone'
 						value: @state.phone
 						onChange: @handleChange
+						onFocus: @clearDefault
+						onBlur: @resetToDefault
 					React.DOM.label null, '?'
 
 				React.DOM.li null,
