@@ -2,6 +2,7 @@
 @import 'fonts';
 
 .nfc_contact_form {
+	margin-top: 2em;
 	h2 {
 		font-size: 3em;
 		text-align: center;
@@ -31,5 +32,9 @@
 		color: $white;
 		background-color: $teal;
 		border: 0;
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 	}
 }
