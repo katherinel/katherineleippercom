@@ -45,6 +45,12 @@
 				@setState errors: errorData
 				console.log(errorData)
 
+	errorText: (field) ->
+		if (@state.errors && @state.errors["#{field}"])
+			React.DOM.span
+				className: 'error-messages'
+				@state.errors["#{field}"].join(", ")
+
 	showForm: ->
 		React.DOM.form
 			noValidate: 'novalidate'
@@ -55,39 +61,47 @@
 			React.DOM.ul null,
 				React.DOM.li null,
 					React.DOM.label null, 'What is your name?'
-					React.DOM.input
-						type: 'text'
-						name: 'name'
-						value: @state.name
-						onChange: @handleChange
+					React.DOM.span
+						React.DOM.input
+							type: 'text'
+							name: 'name'
+							value: @state.name
+							onChange: @handleChange
+						@errorText('name')
 
 				React.DOM.li null,
 					React.DOM.label null, 'Want to give me your '
-					React.DOM.input
-						type: 'email'
-						name: 'email'
-						value: @state.email
-						onChange: @handleChange
-						onFocus: @clearDefault
-						onBlur: @resetToDefault
+					React.DOM.span null,
+						React.DOM.input
+							type: 'email'
+							name: 'email'
+							value: @state.email
+							onChange: @handleChange
+							onFocus: @clearDefault
+							onBlur: @resetToDefault
+						@errorText('email')
 
 					React.DOM.label null, ' and/or '
-					React.DOM.input
-						type: 'text'
-						name: 'phone'
-						value: @state.phone
-						onChange: @handleChange
-						onFocus: @clearDefault
-						onBlur: @resetToDefault
+					React.DOM.span null,
+						React.DOM.input
+							type: 'text'
+							name: 'phone'
+							value: @state.phone
+							onChange: @handleChange
+							onFocus: @clearDefault
+							onBlur: @resetToDefault
+						@errorText('phone')
 					React.DOM.label null, '?'
 
 				React.DOM.li null,
 					React.DOM.label null, 'Where did we meet?'
-					React.DOM.input
-						type: 'text'
-						name: 'met'
-						value: @state.met
-						onChange: @handleChange
+					React.DOM.span null,
+						React.DOM.input
+							type: 'text'
+							name: 'met'
+							value: @state.met
+							onChange: @handleChange
+						@errorText('met')
 
 				React.DOM.li
 					className: 'submit_button'
