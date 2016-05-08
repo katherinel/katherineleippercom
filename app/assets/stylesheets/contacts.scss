@@ -1,0 +1,35 @@
+@import 'colors';
+@import 'fonts';
+
+.nfc_contact_form {
+	h2 {
+		font-size: 3em;
+		text-align: center;
+		margin-bottom: 0.5em;
+	}
+	ul {
+		font-size: 1.5em;
+		line-height: 2.5em;
+		li.submit_button {
+			text-align: right;
+		}
+	}
+	input {
+		margin: 0 0.5em;
+		outline: none;
+		box-shadow: none;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: $med-gray;
+		font: $conduit_light;
+		color: $med-gray;
+	}
+	button {
+		padding: 0.5em 1em;
+		font-size: 0.5em;
+		font: $conduit_medium;
+		color: $white;
+		background-color: $teal;
+		border: 0;
+	}
+}
