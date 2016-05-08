@@ -1,6 +1,7 @@
 @ContactForm = React.createClass
 	getInitialState: ->
 		displayForm: true
+		errors: null
 		name: this.props.placeholders.name
 		email: this.props.placeholders.email
 		phone: this.props.placeholders.phone
@@ -13,8 +14,6 @@
 	clearDefault: (e) ->
 		if (e.target.value == this.props.placeholders["#{ e.target.name }"]) # if the target's value equals the original props value
 			e.target.value = ''
-			console.log('clear default')
-			console.log(@state)
 
 	resetToDefault: (e) ->
 		if (e.target.value == '')
@@ -23,12 +22,32 @@
 
 	handleSubmit: (e) ->
 		e.preventDefault()
-		$.post '/contacts', { contact: @state }, (data) => 
-			@setState displayForm: false
-		, 'JSON'
+		# $.post '/contacts', { contact: @state }, (data) => 
+		# 	@setState displayForm: false
+		# , 'JSON'
+		data =
+			name: @state.name
+			email: @state.email
+			phone: @state.phone
+			met: @state.met
+		$.ajax
+			method: 'POST'
+			url: '/contacts'
+			dataType: 'JSON'
+			data:
+				contact: data
+			success: (data) =>
+				console.log('success')
+				@setState { displayForm: false, errors: null }
+			error: (data) =>
+				console.log('error')
+				errorData = $.parseJSON(data.responseText)
+				@setState errors: errorData
+				console.log(errorData)
 
 	showForm: ->
 		React.DOM.form
+			noValidate: 'novalidate'
 			className: 'nfc_contact_form padded_container'
 			onSubmit: @handleSubmit
 
@@ -70,14 +89,15 @@
 						value: @state.met
 						onChange: @handleChange
 
-				React.DOM.li null,
+				React.DOM.li
+					className: 'submit_button'
 					React.DOM.button
 						type: 'submit'
 						'Keep in touch'
 
 	showComplete: ->
 		React.DOM.div
-			className: 'padded_container'
+			className: 'nfc_contact_form padded_container'
 			React.DOM.h2 null, "Nice to meet you at #{ @state.met }, #{ @state.name }!"
 
 	render: ->
