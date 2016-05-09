@@ -15,8 +15,18 @@
 			text-align: right;
 		}
 	}
-	input {
+	.input_wrapper {
+		display: inline-block;
+		vertical-align: text-top;
 		margin: 0 0.5em;
+		line-height: 1em;
+		.error_messages {
+			font-size: 0.7em;
+			color: red;
+		}
+	}
+	input {
+		display: block;
 		outline: none;
 		box-shadow: none;
 		border-width: 0 0 1px 0;

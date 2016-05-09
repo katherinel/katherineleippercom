@@ -22,33 +22,39 @@
 
 	handleSubmit: (e) ->
 		e.preventDefault()
-		# $.post '/contacts', { contact: @state }, (data) => 
-		# 	@setState displayForm: false
-		# , 'JSON'
-		data =
-			name: @state.name
-			email: @state.email
-			phone: @state.phone
-			met: @state.met
-		$.ajax
-			method: 'POST'
-			url: '/contacts'
-			dataType: 'JSON'
-			data:
-				contact: data
-			success: (data) =>
-				console.log('success')
-				@setState { displayForm: false, errors: null }
-			error: (data) =>
-				console.log('error')
-				errorData = $.parseJSON(data.responseText)
-				@setState errors: errorData
-				console.log(errorData)
+
+		# Clear out the default values in the state, and do the ajax call as a callback
+		# to ensure that setState is complete, otherwise the default values may still get 
+		# passed in.
+		stateObj = {}
+		['email', 'phone'].forEach (key) => # fix this to use the props placeholders object
+			if (@state[key] == @props.placeholders[key])
+				stateObj["#{key}"] = ''
+
+		@setState(stateObj, () =>
+			data =
+				name: @state.name
+				email: @state.email
+				phone: @state.phone.replace(/[^a-zA-Z0-9]/g,'')
+				met: @state.met
+			$.ajax
+				method: 'POST'
+				url: '/contacts'
+				dataType: 'JSON'
+				data:
+					contact: data
+				success: (data) =>
+					@setState { displayForm: false, errors: null }
+				error: (data) =>
+					errorData = $.parseJSON(data.responseText)
+					@setState errors: errorData
+					# to do: reset back to defaults here
+		)
 
 	errorText: (field) ->
 		if (@state.errors && @state.errors["#{field}"])
 			React.DOM.span
-				className: 'error-messages'
+				className: 'error_messages'
 				@state.errors["#{field}"].join(", ")
 
 	showForm: ->
@@ -62,6 +68,7 @@
 				React.DOM.li null,
 					React.DOM.label null, 'What is your name?'
 					React.DOM.span
+						className: 'input_wrapper'
 						React.DOM.input
 							type: 'text'
 							name: 'name'
@@ -71,7 +78,8 @@
 
 				React.DOM.li null,
 					React.DOM.label null, 'Want to give me your '
-					React.DOM.span null,
+					React.DOM.span
+						className: 'input_wrapper'
 						React.DOM.input
 							type: 'email'
 							name: 'email'
@@ -82,9 +90,10 @@
 						@errorText('email')
 
 					React.DOM.label null, ' and/or '
-					React.DOM.span null,
+					React.DOM.span
+						className: 'input_wrapper'
 						React.DOM.input
-							type: 'text'
+							type: 'tel'
 							name: 'phone'
 							value: @state.phone
 							onChange: @handleChange
@@ -95,7 +104,8 @@
 
 				React.DOM.li null,
 					React.DOM.label null, 'Where did we meet?'
-					React.DOM.span null,
+					React.DOM.span
+						className: 'input_wrapper'
 						React.DOM.input
 							type: 'text'
 							name: 'met'
