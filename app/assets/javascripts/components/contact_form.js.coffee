@@ -48,7 +48,10 @@
 				error: (data) =>
 					errorData = $.parseJSON(data.responseText)
 					@setState errors: errorData
-					# to do: reset back to defaults here
+					# reset back to defaults if blank
+					['email', 'phone'].forEach (key) =>
+						if (@state[key] == '')
+							@setState "#{key}": @props.placeholders[key]
 		)
 
 	errorText: (field) ->
