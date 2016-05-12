@@ -27,7 +27,8 @@
 		# to ensure that setState is complete, otherwise the default values may still get 
 		# passed in.
 		stateObj = {}
-		['email', 'phone'].forEach (key) => # fix this to use the props placeholders object
+
+		for key of @props.placeholders
 			if (@state[key] == @props.placeholders[key])
 				stateObj["#{key}"] = ''
 
@@ -49,7 +50,7 @@
 					errorData = $.parseJSON(data.responseText)
 					@setState errors: errorData
 					# reset back to defaults if blank
-					['email', 'phone'].forEach (key) =>
+					for key of @props.placeholders
 						if (@state[key] == '')
 							@setState "#{key}": @props.placeholders[key]
 		)
