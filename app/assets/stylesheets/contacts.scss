@@ -34,6 +34,7 @@
 		border-color: $med-gray;
 		font: $conduit_light;
 		color: $med-gray;
+		border-radius: 0;
 	}
 	button {
 		padding: 0.5em 1em;
@@ -45,6 +46,21 @@
 		&:hover {
 			cursor: pointer;
 			text-decoration: underline;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.nfc_contact_form {
+		.input_wrapper {
+			margin: 0;
+			width: 100%;
+		}
+		input {
+			margin-top: -0.5em;
+		}
+		input, button {
+			width: 100%;
 		}
 	}
 }
